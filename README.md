@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Memorica  
 
-## Getting Started
+**Memorica** is a user-friendly platform designed to make event image sharing seamless and effortless. Whether you’re hosting a wedding, birthday, corporate gathering, or any other special occasion, Memorica is here to help you preserve your cherished memories.  
 
-First, run the development server:
+## Key Features  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Secure Image Storage**: Event hosts can upload and store images in a dedicated gallery for their events.  
+- **Easy Sharing**: Share your event’s gallery with anyone using a unique link.  
+- **Downloadable Content**: Guests and attendees can conveniently download images from the gallery.  
+- **Organized Memories**: All your event images are stored in one place, keeping things neat and accessible.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Why Choose Memorica?  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Memorica takes the hassle out of managing and sharing event photos. Whether you’re an event organizer, photographer, or simply someone who loves hosting gatherings, Memorica ensures your memories are safe, accessible, and easy to share with others.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How It Works  
 
-## Learn More
+1. **Contact us**: Fill the contact form and share your details with us.
+2. **Upload Images**: Give your images to us, we'll upload your images in the site.
+3. **Share the Link**: Share the unique link with your friends, family, or clients.  
+4. **Download with Ease**: Your guests can view and download their favorite images.  
 
-To learn more about Next.js, take a look at the following resources:
+## Future Enhancements  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We are constantly improving Memorica to make your experience better. Here are some planned updates:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Advanced privacy settings for galleries.
+- Personalized event pages with themes.  
+- High-resolution downloads and printing options.  
 
-## Deploy on Vercel
+## Get Started  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ready to share your event memories?  
+Sign up now and start preserving your unforgettable moments with **Memorica**!  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technical details
+
+Here are the technologies used to build this site:
+
+- Next.js v15
+- TailwindCSS
+- Firebase
+- Cloudinary
+- Hostinger
