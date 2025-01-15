@@ -6,11 +6,11 @@ import Link from "next/link";
 export default function page() {
   return (
     <div className="grid place-content-center place-items-center gap-10 mt-12 mb-12">
-      <div className="grid place-content-center place-items-center gap-2 w-3/5 text-center">
-        <h1 className="text-6xl tracking-wider">
+      <div className="grid place-content-center place-items-center gap-2 w-10/12 md:w-3/5 text-center">
+        <h1 className="text-3xl md:text-6xl tracking-wider">
           Our Journey: A Path to Unforgettable Celebrations
         </h1>
-        <p className="text-base text-gray-600 w-2/3">
+        <p className="text-base text-gray-600 w-2/3 text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
           rerum, sit vitae dolore odio ipsum accusamus ipsa delectus
           necessitatibus soluta exercitationem sed nisi.
@@ -32,23 +32,23 @@ export default function page() {
       </div>
 
       {/*Cards*/}
-      <div className="w-3/6 grid place-content-center place-items-center mt-10 gap-12">
+      <div className="md:w-3/6 w-10/12 grid place-content-center place-items-center mt-10 gap-12">
         {events.splice(2).map((event, index) => {
           return (
             <div
               key={index}
-              className="grid place-content-center place-items-center grid-cols-2 gap-5"
+              className="grid place-content-center place-items-center md:grid-cols-2 md:gap-5"
             >
               <Image
                 src={event.image}
                 alt="Memorica"
                 width={500}
                 height={500}
-                className="w-[350px] h-[370px] object-cover rounded-lg"
+                className="md:w-[350px] md:h-[370px] object-cover rounded-lg"
               />
-              <div className="grid place-content-center place-items-center gap-5">
+              <div className="grid place-content-center place-items-center gap-5 p-7">
                 <h1 className="text-3xl place-self-start">{event.name}</h1>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-700 text-justify">
                   {event.description +
                     "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
                 </p>
