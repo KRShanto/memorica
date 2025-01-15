@@ -1,4 +1,12 @@
-export  const people = [
+interface IPerson{
+    image: string;
+    name: string;
+    profession?: string;
+    description: string;
+    tags?: string[];
+}
+
+export  const people: IPerson[] = [
     {
       image: 'https://randomuser.me/api/portraits/men/32.jpg',
       name: 'John Doe',
