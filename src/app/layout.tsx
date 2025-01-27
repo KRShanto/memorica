@@ -7,10 +7,12 @@ import { Plus_Jakarta_Sans, Antic_Didone } from "next/font/google";
 const jakarta = Plus_Jakarta_Sans({
   weight: "400",
   variable: "--font-jakarta",
+  subsets: ["latin"],
 });
 const antic = Antic_Didone({
   weight: "400",
   variable: "--font-antic",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
