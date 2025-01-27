@@ -26,23 +26,23 @@ export default function EventsPage() {
       ],
       images: [
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uNO12nBVgpV2Z3kazAJD9WwlxQ11FN.png",
+          src: "/events-page/wedding-1.png",
           alt: "Wedding event 1",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uNO12nBVgpV2Z3kazAJD9WwlxQ11FN.png",
+          src: "/events-page/wedding-2.png",
           alt: "Wedding event 2",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uNO12nBVgpV2Z3kazAJD9WwlxQ11FN.png",
+          src: "/events-page/wedding-3.png",
           alt: "Wedding event 3",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uNO12nBVgpV2Z3kazAJD9WwlxQ11FN.png",
+          src: "/events-page/wedding-4.png",
           alt: "Wedding event 4",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uNO12nBVgpV2Z3kazAJD9WwlxQ11FN.png",
+          src: "/events-page/wedding-5.png",
           alt: "Wedding event 5",
         },
       ],
@@ -60,23 +60,23 @@ export default function EventsPage() {
       ],
       images: [
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-1.png",
           alt: "Corporate event 1",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-2.png",
           alt: "Corporate event 2",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-3.png",
           alt: "Corporate event 3",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-4.png",
           alt: "Corporate event 4",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-5.png",
           alt: "Corporate event 5",
         },
       ],
@@ -94,23 +94,23 @@ export default function EventsPage() {
       ],
       images: [
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-1.png",
           alt: "Festive event 1",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-2.png",
           alt: "Festive event 2",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-3.png",
           alt: "Festive event 3",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-4.png",
           alt: "Festive event 4",
         },
         {
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dehYxzGETgEQRmUW6lPmL84uHIA6bM.png",
+          src: "/events-page/wedding-5.png",
           alt: "Festive event 5",
         },
       ],
