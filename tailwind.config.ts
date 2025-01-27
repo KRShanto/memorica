@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        jakarta: ["var(--font-jakarta)", "sans-serif"],
+        antic: ["var(--font-antic)", "serif"],
+      },
     },
   },
   plugins: [],

@@ -21,12 +21,12 @@ export default function WelcomeSection() {
 
       {/* Content */}
       <div className="relative z-10 text-white text-center px-4">
-        <h1 className="text-4xl font-bold mb-4 leading-tight">
+        <h1 className="text-7xl font-antic mb-4 leading-tight">
           Crafting Moments <br /> Creating Memories
         </h1>
-        <p className="text-sm mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-          voluptatibus a quia ipsa est.
+        <p className="text-2xl mb-6 font-jakarta">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+          Ullam voluptatibus a quia ipsa est.
         </p>
       </div>
 
