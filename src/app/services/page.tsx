@@ -1,4 +1,9 @@
 import { EventSection } from "@/components/Event/EventSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+};
 
 export default function ServicesPage() {
   const eventTypes = [

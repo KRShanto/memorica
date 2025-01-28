@@ -6,7 +6,12 @@ import MemoricaJourneySection from "@/components/home/MemoricaJourneySection";
 import ServiceSection from "@/components/home/ServiceSection";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import WhyMemoricaSection from "@/components/home/WhyMemoricaSection";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Crafting Memories with Memorica",
+};
 
 export default function Page() {
   return (

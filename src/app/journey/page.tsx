@@ -3,6 +3,12 @@ import Image from "next/image";
 import React from "react";
 import { people as events } from "@/components/Dummy-Data/people";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Journey",
+};
+
 export default function page() {
   return (
     <div className="grid place-content-center place-items-center gap-10 mt-12 mb-12">
