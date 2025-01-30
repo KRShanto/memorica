@@ -1,35 +1,71 @@
-import { ArrowBigUp } from "lucide-react";
-import React from "react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
-export default function MemoricaJourneySection() {
+export default function WhyWorkSection() {
+  const reasons = [
+    {
+      id: 1,
+      title: "Reason 1",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+    {
+      id: 2,
+      title: "Reason 1",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+    {
+      id: 3,
+      title: "Reason 1",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+    {
+      id: 4,
+      title: "Reason 1",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+  ];
+
   return (
-    <div className="grid place-items-center place-content-center w-3/4 mx-auto m-8">
-      <h1 className="text-3xl tracking-widest">Why Work With Memorica?</h1>
-      <p className="text-sm tracking-wide w-2/3 mb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aspernatur
-        corporis ut neque inventore ducimus quibusdam repudiandae cumque,
-        aliquid minus provident eum iste veniam quasi minima voluptate enim
-        libero sint!
-      </p>
+    <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] mb-4">
+          Why Work With Memorica?
+        </h2>
+        <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s
+        </p>
+      </div>
 
-      <div className="grid grid-cols-2 w-3/4 place-items-center place-content-center ">
-        <div className="w-3/4 h-96 rounded-2xl bg-slate-400"></div>
-        <div className="grid grid-cols-2 gap-2">
-          {Array.from({ length: 4 }).map((_, index) => {
-            return (
-              <div key={index} className="p-3  shadow-md rounded-lg space-y-2">
-                <ArrowBigUp />
-                <h1 className="text-xl">Reason *</h1>
-                <p className="text-xs">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-                  laudantium quidem porro enim corrupti! Animi dolorem, ducimus
-                  dicta.
-                </p>
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-snoSCoGGGY6V0Phis3mhX1ris3fwFc.png"
+            alt="People gathering at a restaurant bar"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          {reasons.map((reason) => (
+            <div key={reason.id} className="group">
+              <div className="bg-[#F9F7FF] w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#6D28D9] transition-colors">
+                <ArrowUpRight className="w-5 h-5 text-[#6D28D9] group-hover:text-white transition-colors" />
               </div>
-            );
-          })}
+              <h3 className="text-xl font-semibold text-[#1E1B4B] mb-2">
+                {reason.title}
+              </h3>
+              <p className="text-[#1E1B4B]/70">{reason.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

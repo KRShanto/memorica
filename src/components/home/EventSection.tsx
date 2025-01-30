@@ -1,48 +1,96 @@
-"use client";
-import Link from "next/link";
-import React from "react";
-import { events } from "@/components/Dummy-Data/events";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
-export default function EventSection() {
+const eventCategories = [
+  {
+    title: "Wedding",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Xy1w9YxT909YN79EBdbEAv7HPX9qka.png",
+    tags: [
+      "Engagement",
+      "Mehendi",
+      "Honeymoon",
+      "Wedding Ceremony",
+      "Reception",
+    ],
+  },
+  {
+    title: "Corporate Events",
+    image: "/placeholder.svg",
+    tags: [
+      "Seminar",
+      "Product Launches",
+      "Promotion",
+      "Trade Show",
+      "Executive Meetings",
+      "Award Ceremony",
+    ],
+  },
+  {
+    title: "Festive",
+    image: "/placeholder.svg",
+    tags: ["Stage Show", "Cultural Event", "Comedy Show", "Sports Event"],
+  },
+];
+
+export default function EventsSection() {
   return (
-    <div className="grid place-content-center mx-auto p-8 place-items-center gap-3 w-3/4">
-      <h1 className="tracking-widest text-3xl">Event We Cover For You</h1>
-      <p className="text-gray-700 text-sm text-justify tracking-wide mb-5 w-2/3">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam dolor
-        qui adipisci est, exercitationem cupiditate. Quidem corporis ab
-        explicabo eligendi iusto aliquam, amet blanditiis deserunt ullam
-        commodi.
-      </p>
+    <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] mb-4">
+          Events We Cover for You
+        </h2>
+        <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s
+        </p>
+      </div>
 
-      <div className="relative">
-        <Link
-          href={"/events"}
-          className="absolute top-2/3 left-1/2 transform -translate-x-1/2 z-50 p-2 text-sm bg-[#af2fbd] rounded-lg"
-        >
-          Explore More Events
-        </Link>
-        <div className="grid grid-cols-3 gap-3">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="p-4 border rounded-md shadow-md w-full bg-gray-300 space-y-3"
-            >
-              <div className="bg-[#ab99c6] w-full h-40 border rounded-bl-3xl"></div>
-              <h2 className="text-lg font-semibold">{event.title}</h2>
-              <div className="flex gap-2 mt-2 flex-wrap text-sm">
-                {event.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="bg-gray-200 px-2 py-1 rounded text-xs"
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {eventCategories.map((category) => (
+          <div
+            key={category.title}
+            className="bg-gray-50 rounded-3xl overflow-hidden group hover:shadow-lg transition-shadow"
+          >
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src={category.image || "/placeholder.svg"}
+                alt={category.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-[#1E1B4B] mb-4">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.tags.map((tag) => (
+                  <button
+                    key={tag}
+                    className="px-3 py-1 text-sm bg-white text-[#6D28D9] rounded-full hover:bg-[#6D28D9] hover:text-white transition-colors"
                   >
                     {tag}
-                  </span>
+                  </button>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </div>
+
+      <div className="flex justify-center">
+        <Button
+          variant="default"
+          size="lg"
+          className="bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full px-8"
+        >
+          See More Events
+          <ChevronDown className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
+    </section>
   );
 }

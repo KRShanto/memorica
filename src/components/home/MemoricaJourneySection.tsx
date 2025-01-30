@@ -1,52 +1,95 @@
-import Link from "next/link";
-import React from "react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function MemoricaJourneySection() {
+export default function JourneySection() {
   return (
-    <div className="m-8 mx-auto max-w-7xl grid place-content-center place-items-center gap-8">
-      <h1 className="text-3xl font-semibold text-center tracking-widest">
-        Explore Memorica Journey of Creating Unforgettable Moments
-      </h1>
+    <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] max-w-4xl mx-auto leading-tight">
+          Explore Memorica Journey of
+          <br />
+          Creating Unforgettable Moments
+        </h2>
 
-      {/* Timeline */}
-      <div className="relative w-full max-w-[500px] h-1 bg-gradient-to-l from-slate-300 to-transparent">
-        {/* Timeline Points */}
-        <div className="absolute top-[-25px] left-0 flex flex-col items-center">
-          <span className="text-xs mb-1">2023</span>
-          <div className="w-3 h-3 rounded-full bg-black"></div>
-        </div>
-        <div className="absolute top-[-25px] left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <span className="text-xs mb-1">2024</span>
-          <div className="w-3 h-3 rounded-full bg-black"></div>
-        </div>
-        <div className="absolute top-[-25px] -right-2 flex flex-col items-center">
-          <span className="text-xs mb-1">2025</span>
-          <div className="w-3 h-3 rounded-full bg-black"></div>
+        {/* Timeline */}
+        <div className="mt-8 flex items-center justify-center gap-1">
+          <div className="flex items-center">
+            <div className="h-2 w-2 rounded-full bg-[#6D28D9]" />
+            <div className="h-[1px] w-16 bg-[#6D28D9]" />
+          </div>
+          <div className="flex flex-col items-center gap-1">
+            <div className="h-3 w-3 rounded-full bg-[#6D28D9]" />
+            <span className="text-sm font-medium">2023</span>
+          </div>
+          <div className="flex items-center">
+            <div className="h-[1px] w-16 bg-[#6D28D9]" />
+            <div className="h-4 w-4 rounded-full bg-[#6D28D9]" />
+            <div className="h-[1px] w-16 bg-[#6D28D9]" />
+          </div>
+          <div className="flex flex-col items-center gap-1">
+            <div className="h-3 w-3 rounded-full bg-[#6D28D9]" />
+            <span className="text-sm font-medium">2024</span>
+          </div>
+          <div className="flex items-center">
+            <div className="h-[1px] w-16 bg-[#6D28D9]" />
+            <div className="h-2 w-2 rounded-full bg-[#6D28D9]" />
+          </div>
         </div>
       </div>
 
-      {/* Dummy Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 place-content-center place-items-center">
-        {/* Large Dummy Div */}
-        <div className="w-72 h-96 rounded-lg bg-slate-400"></div>
-
-        {/* Nested Dummy Divs */}
-        <div className="gap-3 grid place-items-center place-content-center">
-          <div className="w-72 h-60 rounded-lg bg-slate-400"></div>
-          <div className="flex justify-between items-center gap-2 w-full">
-            <div className="w-32 h-32 rounded-lg bg-slate-400"></div>
-            <div className="w-32 h-32 rounded-lg bg-slate-400"></div>
+      {/* Image Grid */}
+      <div className="grid md:grid-cols-2 gap-4 mb-12">
+        <div className="rounded-3xl overflow-hidden aspect-square md:aspect-auto md:row-span-2">
+          <Image
+            src="/events-page/wedding-4.png"
+            alt="Elegant table setting with balloons and flowers"
+            width={600}
+            height={800}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="rounded-3xl overflow-hidden aspect-[4/3]">
+          <Image
+            src="/events-page/wedding-4.png"
+            alt="Speaker presenting to audience"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="rounded-3xl overflow-hidden aspect-square">
+            <Image
+              src="/events-page/wedding-4.png"
+              alt="Business person at conference"
+              width={300}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-3xl overflow-hidden aspect-square">
+            <Image
+              src="/events-page/wedding-4.png"
+              alt="Person celebrating with confetti"
+              width={300}
+              height={300}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
 
       {/* Button */}
-      <Link
-        href="/journey"
-        className="p-3 bg-[#992ba8] text-white rounded-md hover:bg-[#7a2190] transition-all"
-      >
-        Explore Our Journey
-      </Link>
-    </div>
+      <div className="flex justify-center">
+        <Button
+          size="lg"
+          className="bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full px-8"
+        >
+          Explore Our Journeys
+          <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
+    </section>
   );
 }
