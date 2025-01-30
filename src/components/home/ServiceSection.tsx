@@ -5,38 +5,37 @@ import { ArrowRight } from "lucide-react";
 const services = [
   {
     id: 1,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K5VytEv8iqPK0oeAmMOYKX0e9vKBrb.png",
+    image: "/services/service1.png",
     alt: "Elegant dining table with floral decorations and candles",
     className: "col-span-2 row-span-1",
   },
   {
     id: 2,
-    image: "/placeholder.svg",
+    image: "/services/service2.png",
     alt: "Modern minimalist table setting",
     className: "col-span-1 row-span-1",
   },
   {
     id: 3,
-    image: "/placeholder.svg",
+    image: "/services/service3.png",
     alt: "Red and white flower arrangement",
     className: "col-span-1 row-span-1",
   },
   {
     id: 4,
-    image: "/placeholder.svg",
+    image: "/services/service4.png",
     alt: "Art gallery exhibition",
     className: "col-span-1 row-span-1",
   },
   {
     id: 5,
-    image: "/placeholder.svg",
+    image: "/services/service5.png",
     alt: "Conference microphone setup",
     className: "col-span-1 row-span-1",
   },
   {
     id: 6,
-    image: "/placeholder.svg",
+    image: "/services/service6.png",
     alt: "Colorful floral centerpiece",
     className: "col-span-1 row-span-1",
   },
