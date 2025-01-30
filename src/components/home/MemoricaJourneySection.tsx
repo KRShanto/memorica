@@ -42,38 +42,38 @@ export default function JourneySection() {
       <div className="grid md:grid-cols-2 gap-4 mb-12">
         <div className="rounded-3xl overflow-hidden aspect-square md:aspect-auto md:row-span-2">
           <Image
-            src="/events-page/wedding-4.png"
+            src="/journey/journey1.png"
             alt="Elegant table setting with balloons and flowers"
             width={600}
-            height={800}
+            height={500}
             className="w-full h-full object-cover"
           />
         </div>
         <div className="rounded-3xl overflow-hidden aspect-[4/3]">
           <Image
-            src="/events-page/wedding-4.png"
+            src="/journey/journey2.png"
             alt="Speaker presenting to audience"
             width={600}
-            height={400}
+            height={200}
             className="w-full h-full object-cover"
           />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="rounded-3xl overflow-hidden aspect-square">
             <Image
-              src="/events-page/wedding-4.png"
+              src="/journey/journey3.png"
               alt="Business person at conference"
               width={300}
-              height={300}
+              height={100}
               className="w-full h-full object-cover"
             />
           </div>
           <div className="rounded-3xl overflow-hidden aspect-square">
             <Image
-              src="/events-page/wedding-4.png"
+              src="/journey/journey4.png"
               alt="Person celebrating with confetti"
               width={300}
-              height={300}
+              height={100}
               className="w-full h-full object-cover"
             />
           </div>

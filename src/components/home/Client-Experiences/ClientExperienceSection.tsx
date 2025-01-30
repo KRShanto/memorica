@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, AlignLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -13,8 +13,7 @@ const testimonials = [
     id: 1,
     name: "Fahim Ahmed",
     role: "Founder, Morphex",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-o525veaEsVtE208WudzCT1QkRP6TYY.png",
+    image: "/clients/client1.png",
     quote:
       "Lorem ipsum dolor sit amet consectetur. Arcu porttitor dolor aliquet imperdiet. Curabitur pellentesque blandit lectus lectus gravida.",
     tags: ["Wedding", "Haldi Night"],
@@ -23,7 +22,7 @@ const testimonials = [
     id: 2,
     name: "Sarah Johnson",
     role: "CEO, EventPro",
-    image: "/placeholder.svg",
+    image: "/clients/client2.png",
     quote:
       "Exceptional service and attention to detail. The team went above and beyond to make our corporate event truly memorable.",
     tags: ["Corporate", "Conference"],
@@ -32,7 +31,7 @@ const testimonials = [
     id: 3,
     name: "Michael Chen",
     role: "Marketing Director",
-    image: "/placeholder.svg",
+    image: "/clients/client3.png",
     quote:
       "Working with this team was a pleasure. They transformed our vision into reality with professionalism and creativity.",
     tags: ["Product Launch", "Gala"],
@@ -124,11 +123,6 @@ export default function TestimonialSection() {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 text-sm font-medium bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
-                    <AlignLeft className="w-4 h-4" />
-                    Name & Feedback
-                  </div>
-
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold">
                       {testimonials[currentIndex].name}

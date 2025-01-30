@@ -45,7 +45,7 @@ export default function WhyWorkSection() {
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-snoSCoGGGY6V0Phis3mhX1ris3fwFc.png"
+            src="/whywork.png"
             alt="People gathering at a restaurant bar"
             fill
             className="object-cover"
