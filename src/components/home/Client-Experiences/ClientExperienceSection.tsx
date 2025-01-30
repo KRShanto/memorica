@@ -77,7 +77,7 @@ export default function TestimonialSection() {
 
   return (
     <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] text-center max-w-4xl mx-auto leading-tight mb-16">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-antic text-[#1D1F7C] text-center max-w-4xl mx-auto leading-tight mb-16">
         Client Experiences that Inspire Us to Keep Creating Excellence
       </h2>
 
@@ -139,7 +139,7 @@ export default function TestimonialSection() {
                   </div>
 
                   <blockquote className="text-lg text-gray-700">
-                    "{testimonials[currentIndex].quote}"
+                    &quot;{testimonials[currentIndex].quote}&quot;
                   </blockquote>
 
                   <div className="flex gap-2">

@@ -35,7 +35,7 @@ export default function FAQSection() {
 
   return (
     <div className="px-4 py-12 md:px-6 lg:px-8 max-w-5xl mx-auto">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-center mb-12 leading-tight">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-antic text-[#1D1F7C] text-center mb-12 leading-tight">
         Everything You Need to Know
         <br />
         About Memorica

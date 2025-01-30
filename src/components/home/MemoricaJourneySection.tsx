@@ -6,7 +6,7 @@ export default function JourneySection() {
   return (
     <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] max-w-4xl mx-auto leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-antic text-[#1D1F7C] max-w-4xl mx-auto leading-tight">
           Explore Memorica Journey of
           <br />
           Creating Unforgettable Moments

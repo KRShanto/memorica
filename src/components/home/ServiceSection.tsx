@@ -46,13 +46,13 @@ export default function ServicesSection() {
   return (
     <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-antic text-[#1D1F7C] mb-4">
           Services, Made for You
         </h2>
         <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
+          ever since the 1500s
         </p>
       </div>
 

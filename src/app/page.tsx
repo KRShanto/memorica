@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div>
+    <div className="font-jakarta">
       <WelcomeSection />
       <EventSection />
       <ServiceSection />

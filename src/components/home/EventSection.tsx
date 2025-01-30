@@ -5,8 +5,7 @@ import { ChevronDown } from "lucide-react";
 const eventCategories = [
   {
     title: "Wedding",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Xy1w9YxT909YN79EBdbEAv7HPX9qka.png",
+    image: "/events/wedding.png",
     tags: [
       "Engagement",
       "Mehendi",
@@ -17,7 +16,7 @@ const eventCategories = [
   },
   {
     title: "Corporate Events",
-    image: "/placeholder.svg",
+    image: "/events/corporate.png",
     tags: [
       "Seminar",
       "Product Launches",
@@ -29,7 +28,7 @@ const eventCategories = [
   },
   {
     title: "Festive",
-    image: "/placeholder.svg",
+    image: "/events/festive.png",
     tags: ["Stage Show", "Cultural Event", "Comedy Show", "Sports Event"],
   },
 ];
@@ -38,13 +37,13 @@ export default function EventsSection() {
   return (
     <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1E1B4B] mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-antic text-[#1D1F7C] mb-4">
           Events We Cover for You
         </h2>
         <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
+          ever since the 1500s
         </p>
       </div>
 
@@ -70,7 +69,7 @@ export default function EventsSection() {
                 {category.tags.map((tag) => (
                   <button
                     key={tag}
-                    className="px-3 py-1 text-sm bg-white text-[#6D28D9] rounded-full hover:bg-[#6D28D9] hover:text-white transition-colors"
+                    className="px-3 py-1 text-sm bg-[#ede5fa] text-[#6D28D9] rounded-full hover:bg-[#6D28D9] hover:text-white transition-colors"
                   >
                     {tag}
                   </button>
