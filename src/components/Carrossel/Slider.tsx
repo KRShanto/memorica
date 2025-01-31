@@ -43,13 +43,13 @@ export default function CarouselThreeD() {
           disableOnInteraction: false,
         }}
         modules={[EffectCoverflow, Autoplay]}
-        className="w-3/4 h-36"
+        className="w-3/4 h-52"
       >
         {images.map((src, index) => (
           <SwiperSlide
             key={index}
-            className={`relative w-32 h-32 rounded-lg shadow-lg overflow-hidden transition-all ${
-              activeIndex === index ? "border-4 border-green-700" : ""
+            className={`relative w-28 h-52 rounded-lg shadow-lg overflow-hidden transition-all ${
+              activeIndex === index ? "border-4 border-white" : ""
             }`}
           >
             <div className="relative w-full h-full">

@@ -14,13 +14,13 @@ import {
 
 export default function Footer() {
   return (
-    <div className="w-full py-10 bg-[#f1ecfb]">
+    <div className="w-full py-10 bg-[#f1ecfb] font-antic">
       <div className="w-5/6 h-full mx-auto grid place-content-center relative space-y-16">
         {/* logo and text */}
         <div className="flex flex-col space-y-6">
           <Image src={logo} alt="logo" />
           <div className="md:flex md:flex-row flex-col justify-center items-center space-y-4">
-            <h1 className="text-[#ad42c9] md:text-4xl text-2xl w-3/4 tracking-widest">
+            <h1 className="text-[#1D1F7C] md:text-4xl text-2xl w-3/4 tracking-widest">
               Together, lets make your next event a cherished memory.
             </h1>
             <Link
