@@ -71,7 +71,7 @@ export default function WelcomeSection() {
       </Link>
 
       {/* Slider Section */}
-      <div className="w-full absolute bottom-28 left-1/2 -translate-x-1/2">
+      <div className="w-full absolute bottom-12 left-1/2 -translate-x-1/2">
         <Slider />
       </div>
     </div>

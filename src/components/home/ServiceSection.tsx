@@ -31,7 +31,7 @@ const services = [
     id: 5,
     image: "/services/service5.png",
     alt: "Conference microphone setup",
-    className: "col-span-1 row-span-1",
+    className: "col-span-2 row-span-1",
   },
   {
     id: 6,
@@ -55,11 +55,11 @@ export default function ServicesSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {services.map((service) => (
           <div
             key={service.id}
-            className={`relative aspect-[4/3] rounded-3xl overflow-hidden group ${service.className}`}
+            className={`relative #aspect-[4/3] rounded-3xl overflow-hidden group ${service.className} h-48`}
           >
             <Image
               src={service.image || "/placeholder.svg"}

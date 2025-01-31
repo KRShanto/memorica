@@ -1,5 +1,7 @@
 import React from "react";
 import Slider from "@/components/Carrossel/BackgroundSlider";
+import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function ExploreEventSection() {
   return (
@@ -14,8 +16,8 @@ export default function ExploreEventSection() {
 
       {/* Glassmorphic Popup */}
       <div className="relative flex items-center justify-center z-50">
-        <div className="relative grid place-content-center place-items-center gap-5 max-w-lg h-[300px] bg-white/10 backdrop-blur-md rounded-lg p-6 shadow-lg">
-          <h1 className="text-xl font-bold text-white tracking-widest">
+        <div className="relative grid place-content-center place-items-center gap-y-8 max-w-[600px] bg-gray-500/30 backdrop-blur-lg rounded-lg  shadow-lg border-2 border-[#B338C5] font-antic px-24 py-12">
+          <h1 className="text-3xl  text-white tracking-widest">
             Explore Event Highlights
           </h1>
           <p className="mt-2 text-white text-sm">
@@ -24,6 +26,17 @@ export default function ExploreEventSection() {
             quasi ipsum, cupiditate natus aperiam quo dicta magni amet similique
             doloribus.
           </p>
+          <div>
+            {" "}
+            <Button
+              variant="default"
+              size="lg"
+              className="bg-white text-[#1D1F7C] hover:bg-white hover:text-black  rounded-full px-8"
+            >
+              Explore All Services
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>
