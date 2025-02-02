@@ -7,7 +7,6 @@ import Slider from '../Carrossel/Slider'
 
 export default function WelcomeSection() {
   const { activeImageIndex } = useContext(ImageContext)
-  console.log(activeImageIndex)
   const sliderImages = [
     'https://swiperjs.com/demos/images/nature-1.jpg',
     'https://swiperjs.com/demos/images/nature-2.jpg',
