@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/autoplay";
-import { EffectCoverflow} from "swiper/modules";
+import { Autoplay, EffectCoverflow} from "swiper/modules";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -38,7 +38,11 @@ export default function BackgroundSlider() {
           modifier: 2.5,
           slideShadows: true,
         }}
-        modules={[EffectCoverflow]}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
+        modules={[EffectCoverflow, Autoplay]}
         className="w-full h-72"
       >
         {images.map((src, index) => (
