@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col space-y-6">
           <Image src={logo} alt="logo" />
           <div className="md:flex md:flex-row flex-col justify-center items-center space-y-4">
-            <h1 className="text-[#1D1F7C] md:text-4xl text-2xl w-3/4 tracking-widest">
+            <h1 className="text-[#1D1F7C] md:text-4xl text-2xl">
               Together, lets make your next event a cherished memory.
             </h1>
             <Link
@@ -35,8 +35,10 @@ export default function Footer() {
         {/* links */}
         <div className="flex flex-col md:flex md:flex-row w-3/4 gap-16">
           <div className="flex flex-col">
-            <h1 className="text-[#ad42c9] text-xl mb-2">Important</h1>
-            <div className="flex flex-col gap-1">
+            <h1 className="text-[#64399A] text-xl mb-2 font-semibold font-jakarta">
+              Important
+            </h1>
+            <div className="flex flex-col gap-1 font-jakarta text-[#8159C9]">
               <Link className="text-sm" href={"/"}>
                 Home
               </Link>
@@ -60,8 +62,10 @@ export default function Footer() {
 
           {/* legal */}
           <div className="flex flex-col">
-            <h1 className="text-[#ad42c9] text-xl mb-2">Legal</h1>
-            <div className="flex flex-col gap-1">
+            <h1 className="text-[#64399A] text-xl mb-2 font-semibold font-jakarta">
+              Legal
+            </h1>
+            <div className="flex flex-col gap-1 font-jakarta text-[#8159C9]">
               <Link className="text-sm" href={"/privacy-policy"}>
                 Privacy Policy
               </Link>
@@ -76,8 +80,10 @@ export default function Footer() {
 
           {/* contact */}
           <div className="flex flex-col">
-            <h1 className="text-[#ad42c9] text-xl mb-2">Contact</h1>
-            <div className="flex flex-col gap-1">
+            <h1 className="text-[#64399A] text-xl mb-2 font-semibold font-jakarta">
+              Contact
+            </h1>
+            <div className="flex flex-col gap-1 font-jakarta text-[#8159C9]">
               <Link
                 href={"mailto:memorica.event@gmail.com"}
                 className="flex items-center gap-2 text-sm"
@@ -97,7 +103,7 @@ export default function Footer() {
         </div>
 
         {/* copyright */}
-        <div className="flex md:justify-between flex-col-reverse md:flex-row text-sm gap-5">
+        <div className="flex md:justify-between flex-col-reverse md:flex-row text-sm gap-5 font-jakarta">
           <p>Copyright © 2024 - All Rights Reserved</p>
           <div className="flex gap-3">
             <Link
