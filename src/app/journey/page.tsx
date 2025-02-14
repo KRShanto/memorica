@@ -1,73 +1,118 @@
-import { MoveUpRight, Search } from "lucide-react";
+"use client";
+
 import Image from "next/image";
-import React from "react";
-import { people as events } from "@/components/Dummy-Data/people";
-import Link from "next/link";
-import { Metadata } from "next";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Search, ArrowRight } from "lucide-react";
+import { useState } from "react";
 
-export const metadata: Metadata = {
-  title: "Our Journey",
-};
+interface Event {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+}
 
-export default function page() {
+const events: Event[] = [
+  {
+    id: 1,
+    title: "Luxury Wedding Planning",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard. Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard.",
+    imageUrl: "/events-journey/journey1.png",
+    imageAlt: "Luxury wedding setup with pink lighting and decorations",
+  },
+  {
+    id: 2,
+    title: "Corporate Events",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard. Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard.",
+    imageUrl: "/events-journey/journey1.png",
+    imageAlt: "Indoor corporate venue setup",
+  },
+  {
+    id: 3,
+    title: "Charity Events",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard. Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard.",
+    imageUrl: "/events-journey/journey1.png",
+    imageAlt: "Charity event setup with volunteers",
+  },
+];
+
+function EventCard({ event }: { event: Event }) {
   return (
-    <div className="grid place-content-center place-items-center gap-10 mt-12 mb-12">
-      <div className="grid place-content-center place-items-center gap-2 w-10/12 md:w-3/5 text-center">
-        <h1 className="text-3xl md:text-6xl tracking-wider">
-          Our Journey: A Path to Unforgettable Celebrations
-        </h1>
-        <p className="text-base text-gray-600 w-2/3 text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          rerum, sit vitae dolore odio ipsum accusamus ipsa delectus
-          necessitatibus soluta exercitationem sed nisi.
-        </p>
-      </div>
-
-      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden shadow-sm">
-        {/* Icon */}
-        <div className="px-3 text-gray-500">
-          <Search className="h-5 w-5" />
-        </div>
-
-        {/* Input Field */}
-        <input
-          type="text"
-          placeholder="Search Your Specific Event"
-          className="w-full px-3 py-2 text-gray-700 focus:outline-none"
+    <div className="flex flex-col md:flex-row gap-6 items-center bg-white rounded-lg overflow-hidden">
+      <div className="relative w-full md:w-1/3 aspect-square max-w-md">
+        <Image
+          src={event.imageUrl || "/placeholder.svg"}
+          alt={event.imageAlt}
+          fill
+          className="object-cover"
         />
       </div>
+      <div className="flex-1 p-6 space-y-4">
+        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-serif text-primary">
+          {event.title}
+        </h2>
+        <p className="text-muted-foreground text-base lg:text-lg xl:text-xl">
+          {event.description}
+        </p>
+        <Button
+          variant="secondary"
+          className="bg-purple-600 text-white hover:bg-purple-700 text-sm lg:text-base xl:text-lg"
+        >
+          Explore More{" "}
+          <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+        </Button>
+      </div>
+    </div>
+  );
+}
 
-      {/*Cards*/}
-      <div className="md:w-3/6 w-10/12 grid place-content-center place-items-center mt-10 gap-12">
-        {events.splice(2).map((event, index) => {
-          return (
-            <div
-              key={index}
-              className="grid place-content-center place-items-center md:grid-cols-2 md:gap-5"
-            >
-              <Image
-                src={event.image}
-                alt="Memorica"
-                width={500}
-                height={500}
-                className="md:w-[350px] md:h-[370px] object-cover rounded-lg"
-              />
-              <div className="grid place-content-center place-items-center gap-5 p-7">
-                <h1 className="text-3xl place-self-start">{event.name}</h1>
-                <p className="text-sm text-gray-700 text-justify">
-                  {event.description +
-                    "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
-                </p>
-                <Link
-                  href={`/events/${event.name}`}
-                  className="text-sm bg-[#ad42c9] text-white border px-7 py-2 rounded-lg flex justify-center items-center gap-2"
-                >
-                  Explore More <MoveUpRight size={18} />
-                </Link>
-              </div>
-            </div>
-          );
-        })}
+export default function OurJourney() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredEvents = events.filter(
+    (event) =>
+      event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      event.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  return (
+    <div className="container mx-auto px-4 py-12 lg:py-24">
+      <div className="text-center space-y-6 mb-12 lg:mb-24">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-primary leading-tight">
+          Our Journey: A Path to{" "}
+          <span className="block">Unforgettable Celebrations</span>
+        </h1>
+        <p className="text-muted-foreground max-w-3xl mx-auto text-lg lg:text-xl xl:text-2xl">
+          Lorem ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem ipsum has been the industry&apos;s standard
+        </p>
+        <div className="relative max-w-2xl mx-auto">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5 lg:h-6 lg:w-6" />
+          <Input
+            type="search"
+            placeholder="Search your specific events"
+            className="pl-12 py-6 text-lg lg:text-xl"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="space-y-12 lg:space-y-16">
+        {filteredEvents.map((event) => (
+          <EventCard key={event.id} event={event} />
+        ))}
+
+        {filteredEvents.length === 0 && (
+          <p className="text-center text-muted-foreground py-8 text-xl lg:text-2xl">
+            No events found matching your search.
+          </p>
+        )}
       </div>
     </div>
   );
