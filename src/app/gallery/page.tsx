@@ -1,70 +1,62 @@
-import React from "react";
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Gallery",
-};
+import Image from "next/image";
+import Masonry from "react-masonry-css";
 
-export default function Page() {
+const images = Array.from({ length: 12 }, (_, i) => ({
+  src: `/gallery/gallery${i + 1}.png`,
+  alt: `Gallery Image ${i + 1}`,
+  width: 600,
+  height: 400, // You can adjust the default width and height as needed
+}));
+
+export default function EventGallery() {
+  const breakpointColumns = {
+    default: 4,
+    1536: 3,
+    1280: 3,
+    1024: 2,
+    768: 2,
+    640: 1,
+  };
+
   return (
-    <div className="md:h-screen w-full grid gap-10 mt-5 mb-10 place-content-center place-items-center">
-      {/* Header Section */}
-      <div className="grid place-content-center place-items-center text-center w-full">
-        <h1 className="text-2xl md:text-4xl tracking-wider font-bold">
-          Every Frame is a Cherished Highlight
-        </h1>
-        <p className="mt-2 text-gray-600 text-sm w-2/4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque numquam
-          esse voluptatibus corrupti cumque. Quaerat sunt suscipit dolorem porro
-          veritatis esse distinctio officiis ipsum.
-        </p>
-      </div>
-
-      {/* Gallery Section */}
-      <div className="grid grid-flow-row md:grid-cols-12 md:grid-rows-8 gap-4 h-full w-11/12">
-        {/* Row 1 */}
-        <div className="w-full h-40 flex justify-center items-center col-span-6 row-span-2 rounded-xl drop-shadow-md border-2 bg-blue-100">
-          Large
-        </div>
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-green-100">
-          Small
-        </div>
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-green-100">
-          Small
+    <div className="min-h-screen bg-gradient-to-b from-white to-pink-50">
+      <div className="max-w-[1800px] mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl sm:text-6xl font-bold text-[#1D1F7C] mb-4 font-antic">
+            Every Frame,
+            <br />a Cherished Highlight
+          </h1>
+          <p className="text-[#1D1F7C] max-w-2xl mx-auto font-inter">
+            Lorem ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry&apos;s standard. Lorem
+            Ipsum is simply dummy text of the
+          </p>
         </div>
 
-        {/* Row 2 */}
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-yellow-100">
-          Small
-        </div>
-        <div className="w-full h-40 flex justify-center items-center col-span-6 row-span-2 rounded-xl drop-shadow-md border-2 bg-red-100">
-          Large
-        </div>
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-blue-100">
-          small
-        </div>
-
-        {/* Row 3 */}
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-purple-100">
-          Small
-        </div>
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-orange-100">
-          Small
-        </div>
-        <div className="w-full h-40 flex justify-center items-center col-span-6 row-span-2 rounded-xl drop-shadow-md border-2 bg-blue-100">
-          Large
-        </div>
-
-        {/* Row 4 */}
-        <div className="w-full h-40 flex justify-center items-center col-span-6 row-span-2 rounded-xl drop-shadow-md border-2 bg-blue-100">
-          Large
-        </div>
-        <div className="w-full h-40 flex justify-center items-center col-span-6 md:col-span-3 row-span-2 rounded-xl drop-shadow-md border-2 bg-green-100">
-          Small
-        </div>
-        <div className="hidden w-full md:h-40 md:flex justify-center items-center md:col-span-3 md:row-span-2 rounded-xl drop-shadow-md border-2 bg-green-100">
-          Small
-        </div>
+        <Masonry
+          breakpointCols={breakpointColumns}
+          className="flex -ml-4 w-auto"
+          columnClassName="pl-4 bg-clip-padding"
+        >
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="mb-4 rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <div className="relative">
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          ))}
+        </Masonry>
       </div>
     </div>
   );
