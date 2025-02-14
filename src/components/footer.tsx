@@ -24,7 +24,7 @@ export default function Footer() {
               Together, lets make your next event a cherished memory.
             </h1>
             <Link
-              className="bg-[#a948cc] md:py-2 md:px-2 py-3 px-4 rounded-md text-white w-1/2 md:w-1/4 text-center flex items-center gap-2 justify-center self-start"
+              className="bg-[#a948cc] md:py-2 md:px-2 py-3 px-4 rounded-md text-white w-1/2 md:w-1/4 text-center flex items-center gap-2 justify-center self-start z-20"
               href={"/contact"}
             >
               Get Started <MoveUpRight className="w-4 h-4" />
@@ -138,7 +138,7 @@ export default function Footer() {
         </div>
 
         {/* feather image */}
-        <div className="hidden md:block md:absolute md:right-4 md:bottom-16 xl:top-12 2xl:right-64 md:w-1/3 lg:w-1/4 xl:w-1/6">
+        <div className="hidden z-10 md:block md:absolute md:right-4 md:bottom-16 xl:top-12 2xl:right-64 md:w-1/3 lg:w-1/4 xl:w-1/6">
           <Image src={feather} alt="feather" />
         </div>
       </div>
