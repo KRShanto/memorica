@@ -53,10 +53,10 @@ function EventCard({ event }: { event: Event }) {
         />
       </div>
       <div className="flex-1 p-6 space-y-4">
-        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-serif text-primary">
+        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-antic text-[#1D1F7C]">
           {event.title}
         </h2>
-        <p className="text-muted-foreground text-base lg:text-lg xl:text-xl">
+        <p className="text-[#1D1F7C] font-inter text-base lg:text-lg xl:text-xl">
           {event.description}
         </p>
         <Button
@@ -83,11 +83,11 @@ export default function OurJourney() {
   return (
     <div className="container mx-auto px-4 py-12 lg:py-24">
       <div className="text-center space-y-6 mb-12 lg:mb-24">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-primary leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-antic text-[#1D1F7C] leading-tight">
           Our Journey: A Path to{" "}
           <span className="block">Unforgettable Celebrations</span>
         </h1>
-        <p className="text-muted-foreground max-w-3xl mx-auto text-lg lg:text-xl xl:text-2xl">
+        <p className="font-inter max-w-3xl mx-auto text-lg lg:text-xl xl:text-2xl text-[#1D1F7C]">
           Lorem ipsum is simply dummy text of the printing and typesetting
           industry. Lorem ipsum has been the industry&apos;s standard
         </p>
@@ -103,7 +103,7 @@ export default function OurJourney() {
         </div>
       </div>
 
-      <div className="space-y-12 lg:space-y-16">
+      <div className="space-y-12 lg:space-y-16 max-w-5xl mx-auto">
         {filteredEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
