@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface EventCardProps {
   title: string;
@@ -14,10 +15,12 @@ export function EventCard({ title, benefit, events }: EventCardProps) {
         <div>
           <h3 className="text-lg font-medium mb-4">Benefit</h3>
           <p className="text-gray-600 mb-8">{benefit}</p>
-          <Button className="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 gap-2">
-            Book A Call
-            <span className="inline-block rotate-[-45deg]">→</span>
-          </Button>
+          <Link href="/contact">
+            <Button className="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 gap-2">
+              Book A Call
+              <span className="inline-block rotate-[-45deg]">→</span>
+            </Button>
+          </Link>
         </div>
         <div>
           <h3 className="text-lg font-medium mb-4">Events We Cover</h3>

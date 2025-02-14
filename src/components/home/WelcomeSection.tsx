@@ -74,7 +74,7 @@ export default function WelcomeSection() {
         </div>
 
         <Link
-          href={"tel:1234567890"}
+          href="/contact"
           className="relative border px-2 py-1 z-10 bg-white text-[#8130b6] rounded-lg text-md mt-3 font-medium"
         >
           Book A Call

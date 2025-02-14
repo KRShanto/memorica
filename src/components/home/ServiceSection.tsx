@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -74,14 +75,16 @@ export default function ServicesSection() {
       </div>
 
       <div className="flex justify-center">
-        <Button
-          variant="default"
-          size="lg"
-          className="bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full px-8"
-        >
-          Explore All Services
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link href="/services">
+          <Button
+            variant="default"
+            size="lg"
+            className="bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full px-8"
+          >
+            Explore All Services
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </section>
   );

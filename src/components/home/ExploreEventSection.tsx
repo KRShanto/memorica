@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "@/components/Carrossel/BackgroundSlider";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ExploreEventSection() {
   return (
@@ -23,14 +24,16 @@ export default function ExploreEventSection() {
           </p>
           <div>
             {" "}
-            <Button
-              variant="default"
-              size="lg"
-              className="bg-white text-[#1D1F7C] hover:bg-white hover:text-black  rounded-full px-8"
-            >
-              Explore All Services
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/services">
+              <Button
+                variant="default"
+                size="lg"
+                className="bg-white text-[#1D1F7C] hover:bg-white hover:text-black  rounded-full px-8"
+              >
+                Explore All Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
