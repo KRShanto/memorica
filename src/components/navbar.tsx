@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative p-2 ${
+              className={`relative p-2 font-jakarta ${
                 pathName === link.href
                   ? "text-[#ad42c9] after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[2px] after:bg-[#ad42c9]"
                   : "text-gray-600 hover:text-gray-800 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] hover:after:w-8 after:bg-[#ad42c9] after:transition-width after:duration-300"
