@@ -29,9 +29,11 @@ export default function EventGallery() {
             <br />a Cherished Highlight
           </h1>
           <p className="text-[#1D1F7C] max-w-2xl mx-auto font-inter">
-            Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard. Lorem
-            Ipsum is simply dummy text of the
+            Bringing seamless, engaging, and interactive virtual experiences to
+            life. From online conferences to digital celebrations, we ensure
+            every detail is executed flawlessly. At Memorica, we connect people
+            beyond boundaries, making every virtual event impactful and
+            memorable.
           </p>
         </div>
 
