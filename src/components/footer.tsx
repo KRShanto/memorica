@@ -89,14 +89,14 @@ export default function Footer() {
                 className="flex items-center gap-2 text-sm"
               >
                 <Mail size={12} />
-                <p>memorica.event@gmail.com</p>
+                <p>hello@memorica.events</p>
               </Link>
               <Link
                 href={"tel:+8801234567834"}
                 className="flex items-center gap-2 text-sm"
               >
                 <MessageCircleMore size={12} />
-                <p>+8801234567834</p>
+                <p>01761684968</p>
               </Link>
             </div>
           </div>
