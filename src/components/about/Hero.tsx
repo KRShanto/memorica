@@ -3,8 +3,7 @@ export default function Hero() {
     <header
       className="relative h-[300px] flex flex-col items-center justify-center"
       style={{
-        backgroundImage:
-          "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-muwf59HBNZ8a1UtFkV21zaGIiRn3iW.png')",
+        backgroundImage: "url('/about.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

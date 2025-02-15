@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Masonry from "react-masonry-css";
 
-const images = Array.from({ length: 12 }, (_, i) => ({
+const images = Array.from({ length: 14 }, (_, i) => ({
   src: `/gallery/gallery${i + 1}.png`,
   alt: `Gallery Image ${i + 1}`,
   width: 600,
