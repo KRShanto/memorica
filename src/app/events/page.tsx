@@ -21,7 +21,7 @@ export default function EventsPage() {
     {
       title: "Wedding",
       benefit:
-        "Lorem ipsum dolor sit amet consectetur. Nisi commodo faucibus consequat in auctor varius euismod dictum. Mattis vitae mauris porttitor sagittis neque. Sem eget fringilla lacus amet posuere morbi. Tincidunt dui dui mollis pretium.",
+        "Your wedding day is a once-in-a-lifetime moment, and we ensure it’s nothing short of perfection. We create unforgettable wedding memories filled with love, elegance, and joy. Every experience we craft is designed to be cherished for a lifetime.",
       events: [
         { id: "01", name: "Engagement" },
         { id: "02", name: "Mehedi" },
@@ -55,7 +55,7 @@ export default function EventsPage() {
     {
       title: "Corporate Events",
       benefit:
-        "Lorem ipsum dolor sit amet consectetur. Nisi commodo faucibus consequat in auctor varius euismod dictum. Elevate your corporate gatherings with our expert planning and execution. We handle everything from venue selection to catering, ensuring your event leaves a lasting impression.",
+        "Elevate your corporate gatherings with events that inspire, engage, and leave a lasting impact. From conferences to product launches, we craft seamless experiences that reflect your brand’s vision and professionalism. At Memorica, every detail is designed for success.",
       events: [
         { id: "01", name: "Conference Services" },
         { id: "02", name: "Team Building" },
@@ -89,7 +89,7 @@ export default function EventsPage() {
     {
       title: "Festive",
       benefit:
-        "Lorem ipsum dolor sit amet consectetur. Nisi commodo faucibus consequat in auctor varius euismod dictum. Create memorable celebrations that bring joy and excitement to any occasion. Our team specializes in crafting unique experiences that capture the spirit of your festive gathering.",
+        "Celebrate the spirit of every festival with grandeur, joy, and unforgettable moments. Whether it's cultural festivities, holiday parties, or themed celebrations, we bring vibrant energy to every event. At Memorica, we turn festive occasions into cherished memories.",
       events: [
         { id: "01", name: "Birthday Party" },
         { id: "02", name: "Cultural Events" },
@@ -131,9 +131,9 @@ export default function EventsPage() {
           Events We Craft Just for You
         </h1>
         <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&lsquo;s standard. Lorem
-          Ipsum is simply dummy text of the
+          We transform your dreams into breathtaking celebrations, meticulously
+          designed to reflect your vision. Every event we craft is a seamless
+          blend of elegance, creativity, and unforgettable moments.
         </p>
       </header>
 
