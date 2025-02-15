@@ -9,27 +9,27 @@ export default function FAQSection() {
   const faqs = [
     {
       id: "01",
-      question: "Why Memorica is Different from Other Event Management Agency?",
+      question: "What types of events does Memorica specialize in?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. Adipiscing maecenas dolor et viverra proin. Dignissim dui facilisis amet nulla odio. Etiam pellentesque dignissim tortor amet at. Facilisis ultrices dui odio ornare pellentesque in tempor. Quam sagittis viverra adipiscing etiam. Fermentum cursus sit egestas ipsum. Tempus duis.",
+        "We specialize in a wide range of events, including weddings, corporate gatherings, private parties, brand launches, and more. Whether it's an intimate celebration or a grand affair, we bring your vision to life with precision and creativity.",
     },
     {
       id: "02",
-      question: "Why Memorica is Different from Other Event Management Agency?",
+      question: "Can Memorica customize events according to my preferences?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. Adipiscing maecenas dolor et viverra proin. Dignissim dui facilisis amet nulla odio.",
+        "Absolutely! We believe every event should be as unique as you are. Our team works closely with you to personalize every detail, ensuring your event reflects your style, theme, and expectations.",
     },
     {
       id: "03",
-      question: "Why Memorica is Different from Other Event Management Agency?",
+      question: "How far in advance should I book my event with Memorica?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. Adipiscing maecenas dolor et viverra proin. Dignissim dui facilisis amet nulla odio.",
+        "We recommend booking as early as possible to secure your preferred date and ensure every aspect is meticulously planned. However, we also accommodate last-minute requests, depending on availability.",
     },
     {
       id: "04",
-      question: "Why Memorica is Different from Other Event Management Agency?",
+      question: "Does Memorica handle event logistics and vendor coordination?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. Adipiscing maecenas dolor et viverra proin. Dignissim dui facilisis amet nulla odio.",
+        "Yes! From venue selection and décor to catering, entertainment, and vendor management, we take care of all logistics so you can enjoy a stress-free and seamless experience.",
     },
   ];
 

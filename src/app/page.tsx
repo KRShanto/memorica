@@ -1,4 +1,4 @@
-import FAQSection from "@/components/Dummy-Data/dummyFAQ";
+import FAQSection from "@/components/FAQSection";
 import ClientExperienceSection from "@/components/home/Client-Experiences/ClientExperienceSection";
 import EventSection from "@/components/home/EventSection";
 import ExploreEventSection from "@/components/home/ExploreEventSection";

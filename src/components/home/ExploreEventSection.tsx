@@ -19,8 +19,9 @@ export default function ExploreEventSection() {
             Explore Event Highlights
           </h1>
           <p className="mt-2 text-white text-md">
-            From elegant setups to lively crowds, our gallery reflects the
-            dedication we bring to every event.
+            Step into a world of unforgettable moments, where every detail
+            shines and every celebration becomes a masterpiece. Discover the
+            highlights that make your event truly extraordinary with Memorica.
           </p>
           <div>
             {" "}

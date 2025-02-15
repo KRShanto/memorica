@@ -5,27 +5,27 @@ export default function WhyWorkSection() {
   const reasons = [
     {
       id: 1,
-      title: "Reason 1",
+      title: "Unmatched Creativity",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+        "We go beyond the ordinary, curating fresh, creative, and immersive event experiences that leave a lasting impact.",
     },
     {
       id: 2,
-      title: "Reason 1",
+      title: "Seamless Execution",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+        "From concept to completion, we handle every detail with precision, ensuring a seamless and worry-free event for you.",
     },
     {
       id: 3,
-      title: "Reason 1",
+      title: "Personalized Experience",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+        "Your vision is our blueprint. We tailor every detail to reflect your style, personality, and unique story.",
     },
     {
       id: 4,
-      title: "Reason 1",
+      title: "Memorable Moments",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+        "We don’t just organize events; we craft memories that linger in hearts long after the celebration ends.",
     },
   ];
 
@@ -36,9 +36,9 @@ export default function WhyWorkSection() {
           Why Work With Memorica?
         </h2>
         <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s
+          At Memorica, we blend creativity, precision, and passion to craft
+          events that leave a lasting impression. With our expertise and
+          dedication, your special moments are in the best hands.
         </p>
       </div>
 

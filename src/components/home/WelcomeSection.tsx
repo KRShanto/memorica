@@ -35,8 +35,9 @@ export default function WelcomeSection() {
             Crafting Moments <br /> Creating Memories
           </h1>
           <p className="text-2xl mb-6 font-jakarta">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-            Ullam voluptatibus a quia ipsa est.
+            We don’t just plan events; we create unforgettable experiences that
+            turn into lifelong memories. <br /> At Memorica, every moment we
+            craft is a story waiting to be cherished.
           </p>
         </div>
 

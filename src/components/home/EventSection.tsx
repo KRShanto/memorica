@@ -96,9 +96,9 @@ export default function EventsSection() {
           Events We Cover for You
         </h2>
         <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s
+          From intimate gatherings to grand celebrations, we bring your vision
+          to life with seamless execution. At Memorica, every event is designed
+          to be extraordinary and unforgettable.
         </p>
       </div>
 

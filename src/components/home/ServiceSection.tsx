@@ -50,9 +50,9 @@ export default function ServicesSection() {
           Services, Made for You
         </h2>
         <p className="text-[#1E1B4B]/70 max-w-3xl mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s
+          Meticulously crafted with excellence, our services are designed to
+          meet your unique needs and exceed expectations. At Memorica, we turn
+          your dreams into flawlessly executed realities.
         </p>
       </div>
 
