@@ -88,8 +88,11 @@ export default function OurJourney() {
           <span className="block">Unforgettable Celebrations</span>
         </h1>
         <p className="font-inter max-w-3xl mx-auto text-lg lg:text-xl xl:text-2xl text-[#1D1F7C]">
-          Lorem ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem ipsum has been the industry&apos;s standard
+          From humble beginnings to crafting extraordinary events, our journey
+          is driven by passion, creativity, and excellence. At Memorica, we walk
+          the path of unforgettable celebrations.Transforming visions into
+          lasting moments of joy, creating experiences that stay in hearts
+          forever.
         </p>
         <div className="relative max-w-2xl mx-auto">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5 lg:h-6 lg:w-6" />

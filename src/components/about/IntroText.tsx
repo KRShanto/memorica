@@ -1,10 +1,9 @@
 export default function IntroText() {
   return (
     <p className="text-center text-sm text-muted-foreground max-w-2xl mx-auto">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      To redefine event experiences by crafting unforgettable moments filled
+      with creativity, elegance, and precision. At Memorica, we aspire to make
+      every celebration a masterpiece that leaves a lasting impression.
     </p>
   );
 }
