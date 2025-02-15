@@ -25,7 +25,7 @@ export default function ServicesPage() {
     {
       title: "Event Planning & Strategy",
       benefit:
-        "Lorem ipsum dolor sit amet consectetur. Nisi commodo faucibus consequat in auctor varius euismod dictum. Mattis vitae mauris porttitor sagittis neque. Sem eget fringilla lacus amet posuere morbi. Tincidunt dui dui mollis pretium.",
+        "Make a difference with events that inspire generosity and bring communities together. From fundraising galas to awareness campaigns, we create meaningful experiences that leave a lasting impact. At Memorica, we turn your vision for change into a powerful reality.",
       events: [
         { id: "01", name: "Concept Development & Theme Creation" },
         { id: "02", name: "Event Objectives & Goals Setting" },
@@ -59,7 +59,7 @@ export default function ServicesPage() {
     {
       title: "Design & Decor",
       benefit:
-        "Lorem ipsum dolor sit amet consectetur. Nisi commodo faucibus consequat in auctor varius euismod dictum. Elevate your corporate gatherings with our expert planning and execution. We handle everything from venue selection to catering, ensuring your event leaves a lasting impression.",
+        "Organizing prestigious and impactful events that reflect the values and vision of government institutions. From official ceremonies to public engagements, we ensure seamless execution with professionalism and precision. At Memorica, we bring structure, elegance, and excellence to every government event.",
       events: [
         { id: "01", name: "Event Design & Theme Decor" },
         { id: "02", name: "Venue Layout & Seating Arrangments" },
@@ -93,7 +93,7 @@ export default function ServicesPage() {
     {
       title: "Vendor Management",
       benefit:
-        "Lorem ipsum dolor sit amet consectetur. Nisi commodo faucibus consequat in auctor varius euismod dictum. Create memorable celebrations that bring joy and excitement to any occasion. Our team specializes in crafting unique experiences that capture the spirit of your festive gathering.",
+        "Celebrate life’s special moments with intimate gatherings tailored just for you. From birthdays to anniversaries and exclusive parties, we craft personalized experiences filled with joy and elegance. At Memorica, every private event is a beautifully curated memory in the making.",
       events: [
         {
           id: "01",
@@ -136,9 +136,11 @@ export default function ServicesPage() {
           Unforgettable Celebrations
         </h1>
         <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&lsquo;s standard. Lorem
-          Ipsum is simply dummy text of the
+          From graduation ceremonies to academic conferences, we create events
+          that inspire and celebrate achievements. Our seamless planning ensures
+          a professional and engaging experience for students, educators, and
+          guests. At Memorica, we make every academic milestone truly
+          unforgettable.
         </p>
       </header>
 
