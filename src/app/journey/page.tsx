@@ -28,7 +28,7 @@ const events: Event[] = [
     title: "Corporate Events",
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard. Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard.",
-    imageUrl: "/events-journey/journey1.png",
+    imageUrl: "/events-journey/journey2.jpg",
     imageAlt: "Indoor corporate venue setup",
   },
   {
@@ -36,7 +36,7 @@ const events: Event[] = [
     title: "Charity Events",
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard. Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard.",
-    imageUrl: "/events-journey/journey1.png",
+    imageUrl: "/events-journey/journey3.jpg",
     imageAlt: "Charity event setup with volunteers",
   },
 ];
