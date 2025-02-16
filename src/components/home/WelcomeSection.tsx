@@ -13,6 +13,8 @@ export default function WelcomeSection() {
     "/hero/hero3.png",
     "/hero/hero4.png",
     "/hero/hero5.png",
+    "/hero/hero6.png",
+    "/hero/hero7.png",
   ];
   return (
     <>
@@ -27,6 +29,7 @@ export default function WelcomeSection() {
             priority
             className="blur-[6px]"
           />
+          <div className="absolute inset-0 bg-black/60 shadow-lg"></div>
         </div>
 
         {/* Content */}

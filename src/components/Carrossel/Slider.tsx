@@ -1,11 +1,11 @@
 "use client";
 import { ImageContext } from "@/context/ImageContext";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function CarouselThreeD() {
@@ -16,46 +16,50 @@ export default function CarouselThreeD() {
     "/hero/hero3.png",
     "/hero/hero4.png",
     "/hero/hero5.png",
+    "/hero/hero6.png",
+    "/hero/hero7.png",
   ];
 
   return (
     <>
-      <div className="w-full flex items-center justify-center ">
+      <div className="w-[83rem] mx-auto  flex items-center justify-center">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={5}
-          spaceBetween={30}
+          slidesPerView={3} // Adjusted to show 3 slides at a time
+          spaceBetween={80}
           loop={true}
-          onSlideChange={(swiper) => setActiveImageIndex(swiper.realIndex)}
+          loopAdditionalSlides={3} // Ensures the loop has enough slides to show on both sides
+          onSlideChange={(swiper) => {
+            setActiveImageIndex(swiper.realIndex);
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 12,
-            modifier: 2.5,
-            slideShadows: true,
+            depth: 50,
+            modifier: 5.5,
           }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           modules={[EffectCoverflow, Autoplay]}
-          className="w-full h-64"
         >
           {images.map((src, index) => (
             <SwiperSlide
               key={index}
-              className={`relative w-28 h-52 rounded-lg shadow-lg overflow-hidden transition-all ${
-                activeImageIndex === index ? "border-4 border-white" : ""
+              className={`relative  rounded-lg shadow-lg overflow-hidden transition-all ${
+                activeImageIndex === index ? "border-2 border-white" : ""
               }`}
             >
               <div className="relative w-full h-full">
                 <Image
                   src={src}
                   alt={`Slide ${index + 1}`}
-                  fill
-                  className="object-cover rounded-lg"
+                  className="object-cover"
+                  width={1500}
+                  height={1500}
                 />
               </div>
             </SwiperSlide>
