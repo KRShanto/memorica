@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface EventCardProps {
   title: string;
@@ -8,6 +11,11 @@ interface EventCardProps {
 }
 
 export function EventCard({ title, benefit, events }: EventCardProps) {
+  const pathname = usePathname();
+
+  // check if its a service or events page
+  const isServicePage = pathname.includes("services");
+
   return (
     <section className="mb-20">
       <h2 className="text-4xl font-serif text-purple-800 mb-12">{title}</h2>
@@ -23,7 +31,9 @@ export function EventCard({ title, benefit, events }: EventCardProps) {
           </Link>
         </div>
         <div>
-          <h3 className="text-lg font-medium mb-4">Events We Cover</h3>
+          <h3 className="text-lg font-medium mb-4">
+            {isServicePage ? "Services We Offer" : "Events We Cover"}
+          </h3>
           <div className="space-y-3">
             {events.map((event) => (
               <div

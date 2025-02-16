@@ -173,11 +173,8 @@ export const eventSections = [
     benefit:
       "Organizing prestigious and impactful events that reflect the values and vision of government institutions. From official ceremonies to public engagements, we ensure seamless execution with professionalism and precision. At Memorica, we bring structure, elegance, and excellence to every government event.",
     events: [
-      { id: "01", name: "" },
-      { id: "02", name: "" },
-      { id: "03", name: "" },
-      { id: "04", name: "" },
-      { id: "05", name: "" },
+      { id: "01", name: "Expos" },
+      { id: "02", name: "Fests" },
     ],
     images: [
       {
