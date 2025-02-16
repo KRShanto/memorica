@@ -1,196 +1,131 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { AnimatePresence, motion } from "framer-motion";
 
-const testimonials = [
+interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  quote: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Fahim Ahmed",
-    role: "Founder, Morphex",
-    image: "/clients/client1.png",
+    name: "Rahul Ahmed",
+    role: "Event Director",
+    company: "Luxury Weddings Co.",
+    image: "/clients/client1.jpg",
     quote:
-      "Lorem ipsum dolor sit amet consectetur. Arcu porttitor dolor aliquet imperdiet. Curabitur pellentesque blandit lectus lectus gravida.",
-    tags: ["Wedding", "Haldi Night"],
+      "Memorica transformed our wedding planning process. Their attention to detail and innovative event management solutions made every moment magical. Highly recommended for luxury events.",
   },
   {
     id: 2,
-    name: "Sarah Johnson",
-    role: "CEO, EventPro",
+    name: "Fatima Begum",
+    role: "Marketing Manager",
+    company: "Tech Summit International",
     image: "/clients/client2.png",
     quote:
-      "Exceptional service and attention to detail. The team went above and beyond to make our corporate event truly memorable.",
-    tags: ["Corporate", "Conference"],
+      "Working with Memorica for our annual tech summit was a game-changer. Their digital integration and seamless event coordination helped us deliver an unforgettable experience.",
   },
   {
     id: 3,
-    name: "Michael Chen",
-    role: "Marketing Director",
-    image: "/clients/client3.png",
+    name: "Tanvir Rahman",
+    role: "Operations Director",
+    company: "Global Conferences Ltd",
+    image: "/clients/client3.jpg",
     quote:
-      "Working with this team was a pleasure. They transformed our vision into reality with professionalism and creativity.",
-    tags: ["Product Launch", "Gala"],
+      "Memorica's event management platform streamlined our entire conference planning process. From registration to execution, everything was flawless. A must-have for large-scale events.",
   },
 ];
 
-export default function TestimonialSection() {
+export default function TestimonialCards() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-  };
-
-  const paginate = (newDirection: number) => {
-    setDirection(newDirection);
-    setCurrentIndex((prevIndex) => {
-      let nextIndex = prevIndex + newDirection;
-      if (nextIndex < 0) nextIndex = testimonials.length - 1;
-      if (nextIndex >= testimonials.length) nextIndex = 0;
-      return nextIndex;
-    });
+  const handlePrevious = () => {
+    setDirection(-1);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
-    <section className="px-4 py-16 md:px-6 lg:px-8 max-w-7xl mx-auto">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-antic text-[#1D1F7C] text-center max-w-4xl mx-auto leading-tight mb-16">
-        Client Experiences that Inspire Us to Keep Creating Excellence
-      </h2>
+    <div className="relative w-full max-w-4xl mx-auto min-h-[500px] py-8 px-4 flex items-center justify-center">
+      <div className="relative w-full max-w-2xl h-[300px] sm:h-[350px] md:h-[400px]">
+        {testimonials.map((testimonial, index) => {
+          const position =
+            (index - currentIndex + testimonials.length) % testimonials.length;
 
-      <div className="relative h-[600px] md:h-[400px]">
-        {/* Stacked card effect */}
-        <div className="absolute inset-0 scale-[1.02] -rotate-2 bg-white rounded-3xl border opacity-50" />
-        <div className="absolute inset-0 scale-[1.01] rotate-1 bg-white rounded-3xl border opacity-75" />
-
-        {/* Main testimonial card */}
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={currentIndex}
-            custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 },
-            }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x);
-              if (swipe < -swipeConfidenceThreshold) {
-                paginate(1);
-              } else if (swipe > swipeConfidenceThreshold) {
-                paginate(-1);
-              }
-            }}
-            className="absolute inset-0"
-          >
-            <Card className="h-full bg-white rounded-3xl p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 h-full items-center">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                  <Image
-                    src={testimonials[currentIndex].image || "/placeholder.svg"}
-                    alt={testimonials[currentIndex].name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold">
-                      {testimonials[currentIndex].name}
-                    </h3>
-                    <p className="text-gray-600">
-                      {testimonials[currentIndex].role}
-                    </p>
-                  </div>
-
-                  <blockquote className="text-lg text-gray-700">
-                    &quot;{testimonials[currentIndex].quote}&quot;
-                  </blockquote>
-
-                  <div className="flex gap-2">
-                    {testimonials[currentIndex].tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="bg-[#F9F7FF] text-[#6D28D9] hover:bg-[#F9F7FF]"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Navigation buttons */}
-        <Button
-          variant="default"
-          size="icon"
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-[#6D28D9] hover:bg-[#5B21B6] rounded-full shadow-lg z-10"
-          onClick={() => paginate(-1)}
-        >
-          <ArrowLeft className="h-4 w-4" />
-          <span className="sr-only">Previous testimonial</span>
-        </Button>
-        <Button
-          variant="default"
-          size="icon"
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#6D28D9] hover:bg-[#5B21B6] rounded-full shadow-lg z-10"
-          onClick={() => paginate(1)}
-        >
-          <ArrowRight className="h-4 w-4" />
-          <span className="sr-only">Next testimonial</span>
-        </Button>
-
-        {/* Dots indicator */}
-        <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentIndex ? "bg-[#6D28D9]" : "bg-gray-300"
-              }`}
-              onClick={() => {
-                setDirection(index > currentIndex ? 1 : -1);
-                setCurrentIndex(index);
+          return (
+            <motion.div
+              key={testimonial.id}
+              className="absolute inset-0 bg-white rounded-2xl border-2 border-gray-200 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-[1fr,1fr] gap-4 sm:gap-6"
+              initial={false}
+              animate={{
+                rotate: position === 0 ? -2 : position === 1 ? 0 : 2,
+                opacity: position === 0 ? 1 : 0.7,
+                scale: position === 0 ? 1 : 0.98,
+                zIndex: testimonials.length - position,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              style={{
+                transformOrigin: "center center",
               }}
             >
-              <span className="sr-only">Go to slide {index + 1}</span>
-            </button>
-          ))}
-        </div>
+              <div className="relative w-full h-48 sm:h-full rounded-lg overflow-hidden border border-gray-200">
+                <Image
+                  src={testimonial.image || "/placeholder.svg"}
+                  alt={testimonial.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {testimonial.role}, {testimonial.company}
+                  </p>
+                  <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+
+        <button
+          onClick={handlePrevious}
+          className="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#A412A4] to-[#C235C2] text-white flex items-center justify-center hover:opacity-90 transition-opacity z-50"
+          aria-label="Previous testimonial"
+        >
+          <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+        </button>
+        <button
+          onClick={handleNext}
+          className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#A412A4] to-[#C235C2] text-white flex items-center justify-center hover:opacity-90 transition-opacity z-50"
+          aria-label="Next testimonial"
+        >
+          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+        </button>
       </div>
-    </section>
+    </div>
   );
 }
