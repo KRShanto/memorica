@@ -28,7 +28,7 @@ export default function CarouselThreeD() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={3} // Adjusted to show 3 slides at a time
-          spaceBetween={80}
+          spaceBetween={100}
           loop={true}
           loopAdditionalSlides={3} // Ensures the loop has enough slides to show on both sides
           onSlideChange={(swiper) => {

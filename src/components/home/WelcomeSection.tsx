@@ -1,6 +1,7 @@
 "use client";
 import { ImageContext } from "@/context/ImageContext";
 import Image from "next/image";
+import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
 import { useContext } from "react";
 import Slider from "../Carrossel/Slider";
@@ -18,7 +19,7 @@ export default function WelcomeSection() {
   ];
   return (
     <>
-      <div className="relative min-h-screen bg-gray-700/100 grid place-content-center place-items-center gap-5">
+      <div className="relative min-h-screen ">
         {/* Blurred Background */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -29,23 +30,26 @@ export default function WelcomeSection() {
             priority
             className="blur-[6px]"
           />
-          <div className="absolute inset-0 bg-black/60 shadow-lg"></div>
+          <div className="absolute inset-0 bg-black/70 shadow-lg"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 text-white text-center px-4">
-          <h1 className="text-7xl font-antic mb-4 leading-tight">
+          <h1 className="text-7xl font-antic mb-4 leading-tight relative top-20">
             Crafting Moments <br /> Creating Memories
           </h1>
-          <p className="text-2xl mb-6 font-jakarta">
+          <p
+            className="text-lg mb-6 font-jakarta relative top-20 leading-relaxed"
+            style={{ wordSpacing: "0.3em" }}
+          >
             We don’t just plan events; we create unforgettable experiences that
-            turn into lifelong memories. <br /> At Memorica, every moment we
+            turn into life long memories. <br /> At Memorica, every moment we
             craft is a story waiting to be cherished.
           </p>
         </div>
 
         {/* Satisfied Clients Section */}
-        <div className="relative z-10">
+        <div className="relative z-10  top-20">
           <div className="flex justify-center items-center">
             {/* Profile Avatars */}
             <div className="flex -m-1">
@@ -67,7 +71,7 @@ export default function WelcomeSection() {
 
             {/* Count & Text */}
             <div className="flex items-center -m-1">
-              <div className="w-8 h-8 p-4 flex items-center justify-center rounded-full bg-[#8130b6] text-white text-xs">
+              <div className="w-8 h-8 p-4 flex items-center justify-center rounded-full bg-white text-black text-xs">
                 100+
               </div>
               <h3 className="ml-2 text-white text-sm font-medium">
@@ -77,12 +81,16 @@ export default function WelcomeSection() {
           </div>
         </div>
 
-        <Link
-          href="/contact"
-          className="relative border px-2 py-1 z-10 bg-white text-[#8130b6] rounded-lg text-md mt-3 font-medium"
-        >
-          Book A Call
-        </Link>
+        {/* Button */}
+        <div className="flex justify-center items-center">
+          <Link
+            href="/contact"
+            className="border px-14 py-2 z-10 bg-white text-[#8130b6] rounded-lg text-md mt-3 font-medium w-fit relative top-28 font-inter"
+          >
+            Book A Call
+            <GoArrowUpRight className="inline-block ml-2" />
+          </Link>
+        </div>
 
         {/* Slider Section */}
         <div className="w-full absolute bottom-12 left-1/2 -translate-x-1/2">
