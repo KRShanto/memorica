@@ -34,13 +34,13 @@ export default function BackgroundSlider() {
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         coverflowEffect={{
           rotate: 0,
-          stretch: 5,
-          depth: 50,
+          stretch: 10,
+          depth: 30,
           modifier: 2.5,
           slideShadows: true,
         }}
         autoplay={{
-          delay: 1000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         modules={[EffectCoverflow, Autoplay]}
