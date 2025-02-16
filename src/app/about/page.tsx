@@ -15,7 +15,6 @@ export default function page() {
     <div className="min-h-screen bg-background font-jakarta">
       <Hero />
       <main className="container mx-auto px-4 py-12 space-y-20">
-        <IntroText />
         <Vision />
         <Values />
         <MeetTheTeam />
