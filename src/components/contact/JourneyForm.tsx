@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import Image from "next/image";
 import ContactCard from "./Card";
+import { EMAIL } from "@/lib/constants";
 
 export default function JourneyForm() {
   const [guestEmails, setGuestEmails] = useState<string[]>([]);
@@ -76,7 +77,7 @@ export default function JourneyForm() {
             <p className="text-[#8159C9] text-sm">Inquiries at</p>
             <div className="flex items-center gap-2 text-[#64399A]">
               <Mail className="h-4 w-4" />
-              <span>memorica.events@gmail.com</span>
+              <span>{EMAIL}</span>
             </div>
           </div>
         </div>

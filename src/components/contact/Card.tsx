@@ -1,3 +1,4 @@
+import { PHONE } from "@/lib/constants";
 import { MapPin, Phone } from "lucide-react";
 
 export default function ContactCard() {
@@ -20,7 +21,7 @@ export default function ContactCard() {
 
           <div className="flex items-center gap-2 text-gray-600">
             <Phone className="w-5 h-5 text-purple-600" />
-            <span>01761684968</span>
+            <span>{PHONE}</span>
           </div>
         </div>
       </div>

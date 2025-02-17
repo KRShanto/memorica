@@ -11,6 +11,7 @@ import {
   MoveUpRight,
   Twitter,
 } from "lucide-react";
+import { EMAIL, PHONE } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -85,18 +86,18 @@ export default function Footer() {
             </h1>
             <div className="flex flex-col gap-1 font-jakarta text-[#8159C9]">
               <Link
-                href={"mailto:memorica.event@gmail.com"}
+                href={`mailto:${EMAIL}`}
                 className="flex items-center gap-2 text-sm"
               >
                 <Mail size={12} />
-                <p>hello@memorica.events</p>
+                <p>{EMAIL}</p>
               </Link>
               <Link
-                href={"tel:+8801234567834"}
+                href={`tel:${PHONE}`}
                 className="flex items-center gap-2 text-sm"
               >
                 <MessageCircleMore size={12} />
-                <p>01761684968</p>
+                <p>{PHONE}</p>
               </Link>
             </div>
           </div>
