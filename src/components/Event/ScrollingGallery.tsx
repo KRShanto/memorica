@@ -4,50 +4,58 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 
 interface ScrollingGalleryProps {
-  images: Array<{ src: string; alt: string }>;
+  images?: Array<{ src: string; alt: string }>;
+  speed?: number; // Speed in pixels per second
 }
 
-export function ScrollingGallery({ images }: ScrollingGalleryProps) {
+export function ScrollingGallery({
+  images = [],
+  speed = 50,
+}: ScrollingGalleryProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+    if (!scrollContainer || images.length === 0) return;
 
-    const scrollWidth = scrollContainer.scrollWidth;
-    const clientWidth = scrollContainer.clientWidth;
+    const totalWidth = scrollContainer.scrollWidth;
+    const duration = totalWidth / speed; // Calculate duration based on speed
 
-    let scrollPosition = 0;
-    const scroll = () => {
-      scrollPosition += 1;
-      if (scrollPosition > scrollWidth - clientWidth) {
-        scrollPosition = 0;
-      }
-      scrollContainer.scrollLeft = scrollPosition;
-      requestAnimationFrame(scroll);
+    const resetScroll = () => {
+      scrollContainer.style.transition = "none";
+      scrollContainer.style.transform = "translateX(0)";
+      void scrollContainer.offsetHeight; // Trigger reflow
+      scrollContainer.style.transition = `transform ${duration}s linear`;
+      scrollContainer.style.transform = `translateX(-50%)`;
     };
 
-    const animationFrame = requestAnimationFrame(scroll);
+    resetScroll();
 
-    return () => cancelAnimationFrame(animationFrame);
-  }, []);
+    const interval = setInterval(resetScroll, duration * 1000); // Reset after full scroll
+
+    return () => clearInterval(interval);
+  }, [images, speed]);
+
+  if (images.length === 0) {
+    return null; // Or return a placeholder/loading state
+  }
+
+  const doubledImages = [...images, ...images];
 
   return (
-    <div
-      ref={scrollRef}
-      className="flex overflow-x-hidden space-x-4 py-4"
-      style={{ scrollBehavior: "smooth" }}
-    >
-      {images.concat(images).map((image, index) => (
-        <Image
-          key={index}
-          src={image.src || "/placeholder.svg"}
-          alt={image.alt}
-          width={200}
-          height={150}
-          className="rounded-lg object-cover w-[200px] h-[150px] flex-shrink-0"
-        />
-      ))}
+    <div className="overflow-hidden">
+      <div ref={scrollRef} className="flex space-x-4 py-4">
+        {doubledImages.map((image, index) => (
+          <Image
+            key={index}
+            src={image.src || "/placeholder.svg"}
+            alt={image.alt}
+            width={200}
+            height={150}
+            className="rounded-lg object-cover w-[200px] h-[150px] flex-shrink-0"
+          />
+        ))}
+      </div>
     </div>
   );
 }

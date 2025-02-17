@@ -17,7 +17,7 @@ export function EventSection({
   return (
     <section className="mb-20">
       <EventCard title={title} benefit={benefit} events={events} />
-      <ScrollingGallery images={images} />
+      <ScrollingGallery images={images} speed={100} />
     </section>
   );
 }
