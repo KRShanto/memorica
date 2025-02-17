@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react";
 const eventCategories = [
   {
     title: "Wedding",
-    image: "/events/wedding.png",
+    image: "/events-images/wedding.png",
     tags: [
       "Engagement",
       "Mehendi",
@@ -19,7 +19,7 @@ const eventCategories = [
   },
   {
     title: "Corporate Events",
-    image: "/events/corporate.png",
+    image: "/events-images/corporate.png",
     tags: [
       "Seminar",
       "Product Launches",
@@ -31,17 +31,17 @@ const eventCategories = [
   },
   {
     title: "Festive",
-    image: "/events/festive.png",
+    image: "/events-images/festive.png",
     tags: ["Stage Show", "Cultural Event", "Comedy Show", "Sports Event"],
   },
   {
     title: "Academic Events",
-    image: "/events/academic.png",
+    image: "/events-images/academic.png",
     tags: ["Workshop", "College Fair", "Orientation", "Rag Day", "Flash Mob"],
   },
   {
     title: "Charity Events",
-    image: "/events/charity.png",
+    image: "/events-images/charity.png",
     tags: [
       "Fundraising",
       "Carity Auction",
@@ -51,7 +51,7 @@ const eventCategories = [
   },
   {
     title: "Government Events",
-    image: "/events/government.png",
+    image: "/events-images/government.png",
     tags: [
       "Expos Fests",
       "Charity Auction",
@@ -61,7 +61,7 @@ const eventCategories = [
   },
   {
     title: "Private Events",
-    image: "/events/private.png",
+    image: "/events-images/private.png",
     tags: [
       "Birthday Party",
       "Anniversary",
@@ -72,7 +72,7 @@ const eventCategories = [
   },
   {
     title: "Virtual Events",
-    image: "/events/virtual.png",
+    image: "/events-images/virtual.png",
     tags: [
       "Webinar",
       "Virtual Conference",

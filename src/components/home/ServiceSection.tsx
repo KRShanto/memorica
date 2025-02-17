@@ -6,37 +6,37 @@ import Link from "next/link";
 const services = [
   {
     id: 1,
-    image: "/services/service1.png",
+    image: "/services-images/service1.png",
     alt: "Elegant dining table with floral decorations and candles",
     className: "col-span-2 row-span-1",
   },
   {
     id: 2,
-    image: "/services/service2.png",
+    image: "/services-images/service2.png",
     alt: "Modern minimalist table setting",
     className: "col-span-1 row-span-1",
   },
   {
     id: 3,
-    image: "/services/service3.png",
+    image: "/services-images/service3.png",
     alt: "Red and white flower arrangement",
     className: "col-span-1 row-span-1",
   },
   {
     id: 4,
-    image: "/services/service4.png",
+    image: "/services-images/service4.png",
     alt: "Art gallery exhibition",
     className: "col-span-1 row-span-1",
   },
   {
     id: 5,
-    image: "/services/service5.png",
+    image: "/services-images/service5.png",
     alt: "Conference microphone setup",
     className: "col-span-2 row-span-1",
   },
   {
     id: 6,
-    image: "/services/service6.png",
+    image: "/services-images/service6.png",
     alt: "Colorful floral centerpiece",
     className: "col-span-1 row-span-1",
   },

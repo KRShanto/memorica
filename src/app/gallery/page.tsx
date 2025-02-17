@@ -4,7 +4,7 @@ import Image from "next/image";
 import Masonry from "react-masonry-css";
 
 const images = Array.from({ length: 14 }, (_, i) => ({
-  src: `/gallery/gallery${i + 1}.png`,
+  src: `/gallery-images/gallery${i + 1}.png`,
   alt: `Gallery Image ${i + 1}`,
   width: 600,
   height: 400, // You can adjust the default width and height as needed

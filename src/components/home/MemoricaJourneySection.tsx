@@ -63,7 +63,7 @@ export default function Timeline() {
       <div className="grid md:grid-cols-2 gap-4 mb-12 mt-16">
         <div className="rounded-3xl overflow-hidden aspect-square md:aspect-auto md:row-span-2">
           <Image
-            src="/journey/journey1.png"
+            src="/journey-images/journey1.png"
             alt="Elegant table setting with balloons and flowers"
             width={600}
             height={500}
@@ -72,7 +72,7 @@ export default function Timeline() {
         </div>
         <div className="rounded-3xl overflow-hidden aspect-[4/3]">
           <Image
-            src="/journey/journey2.png"
+            src="/journey-images/journey2.png"
             alt="Speaker presenting to audience"
             width={600}
             height={200}
@@ -82,7 +82,7 @@ export default function Timeline() {
         <div className="grid grid-cols-2 gap-4">
           <div className="rounded-3xl overflow-hidden aspect-square">
             <Image
-              src="/journey/journey3.png"
+              src="/journey-images/journey3.png"
               alt="Business person at conference"
               width={300}
               height={100}
@@ -91,7 +91,7 @@ export default function Timeline() {
           </div>
           <div className="rounded-3xl overflow-hidden aspect-square">
             <Image
-              src="/journey/journey4.png"
+              src="/journey-images/journey4.png"
               alt="Person celebrating with confetti"
               width={300}
               height={100}
