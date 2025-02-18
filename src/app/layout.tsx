@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import { ImageProvider } from "@/context/ImageContext";
 import type { Metadata } from "next";
 import { Antic_Didone, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </ImageProvider>

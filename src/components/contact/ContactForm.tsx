@@ -13,6 +13,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [guestEmails, setGuestEmails] = useState<string[]>([]);
@@ -79,12 +80,14 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        console.log("Form submitted successfully!");
+        toast("Form submitted successfully!");
       } else {
-        console.error("Failed to submit form.");
+        toast.error("Failed to submit form. Please contact support.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      toast.error(
+        "An error occurred while submitting the form. Please contact support."
+      );
     }
   };
 
