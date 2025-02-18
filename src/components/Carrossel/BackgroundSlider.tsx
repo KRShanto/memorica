@@ -45,16 +45,44 @@ export default function BackgroundSlider() {
         }}
         modules={[EffectCoverflow, Autoplay]}
         className="w-full h-72"
+        breakpoints={{
+          320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            coverflowEffect: {
+              depth: 20,
+              modifier: 1.5,
+            },
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            coverflowEffect: {
+              depth: 25,
+              modifier: 2,
+            },
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 100,
+            coverflowEffect: {
+              depth: 30,
+              modifier: 2.5,
+            },
+          },
+        }}
       >
         {images.map((src, index) => (
           <SwiperSlide
             key={index}
-            className="relative w-52 h-52 rounded-lg  overflow-hidden transition-all"
+            className={`relative w-52 h-52 rounded-lg overflow-hidden transition-all ${
+              activeIndex === index ? "scale-110" : "scale-100"
+            }`}
           >
             <div className="relative w-full h-full">
               <Image
-                src={src}
-                alt={`Slide ${index + 1}`}
+                src={src || "/placeholder.svg"}
+                alt={`Event Highlight ${index + 1}`}
                 fill
                 className="object-cover rounded-lg"
               />
