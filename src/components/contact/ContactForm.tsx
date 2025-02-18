@@ -16,6 +16,16 @@ import { Label } from "@/components/ui/label";
 
 export default function ContactForm() {
   const [guestEmails, setGuestEmails] = useState<string[]>([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    meeting_type: "",
+    meeting_time: "",
+    website: "",
+    description: "",
+  });
+
+  const webhookUrl = process.env.NEXT_PUBLIC_MAKE_WEBHOOK_URL;
 
   const addGuest = () => {
     setGuestEmails([...guestEmails, ""]);
@@ -31,12 +41,64 @@ export default function ContactForm() {
     setGuestEmails(newGuestEmails);
   };
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSelectChange = (id: string, value: string) => {
+    setFormData({ ...formData, [id]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!webhookUrl) {
+      console.error("Webhook URL is not defined in the environment variables.");
+      return;
+    }
+
+    const payload = {
+      name: formData.name,
+      email_address: formData.email,
+      guest_emails: guestEmails.filter((email) => email.trim() !== ""),
+      meeting_type: formData.meeting_type,
+      meeting_time: formData.meeting_time,
+      company_website: formData.website,
+      event_description: formData.description,
+    };
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully!");
+      } else {
+        console.error("Failed to submit form.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
   return (
     <div className="bg-[#F1ECFB] rounded-lg p-6 shadow-lg">
-      <form className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-2">
           <Label htmlFor="name">Your Name *</Label>
-          <Input id="name" required className="border-0 bg-white" />
+          <Input
+            id="name"
+            required
+            className="border-0 bg-white"
+            onChange={handleChange}
+          />
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email Address *</Label>
@@ -45,6 +107,7 @@ export default function ContactForm() {
             type="email"
             required
             className="border-0 bg-white"
+            onChange={handleChange}
           />
         </div>
 
@@ -67,7 +130,7 @@ export default function ContactForm() {
                 id={`guest-${index}`}
                 type="email"
                 value={email}
-                onChange={(e: any) => updateGuestEmail(index, e.target.value)}
+                onChange={(e) => updateGuestEmail(index, e.target.value)}
                 className="border-0 bg-white"
               />
             </div>
@@ -88,7 +151,11 @@ export default function ContactForm() {
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label>Meeting Type *</Label>
-            <Select>
+            <Select
+              onValueChange={(value) =>
+                handleSelectChange("meeting_type", value)
+              }
+            >
               <SelectTrigger className="border-0 bg-white">
                 <SelectValue placeholder="Select type" />
               </SelectTrigger>
@@ -100,7 +167,11 @@ export default function ContactForm() {
           </div>
           <div className="space-y-2">
             <Label>Meeting Time *</Label>
-            <Select>
+            <Select
+              onValueChange={(value) =>
+                handleSelectChange("meeting_time", value)
+              }
+            >
               <SelectTrigger className="border-0 bg-white">
                 <SelectValue placeholder="Select time" />
               </SelectTrigger>
@@ -115,7 +186,11 @@ export default function ContactForm() {
 
         <div className="space-y-2">
           <Label htmlFor="website">Company Website Link</Label>
-          <Input id="website" className="border-0 bg-white" />
+          <Input
+            id="website"
+            className="border-0 bg-white"
+            onChange={handleChange}
+          />
         </div>
 
         <div className="space-y-2">
@@ -123,6 +198,7 @@ export default function ContactForm() {
           <Textarea
             id="description"
             className="min-h-[120px] border-0 bg-white"
+            onChange={handleChange}
           />
         </div>
 
