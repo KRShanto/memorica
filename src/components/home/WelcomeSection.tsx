@@ -40,7 +40,7 @@ export default function WelcomeSection() {
             <br className="sm:hidden" /> Memories
           </h1>
           <p
-            className="text-base sm:text-lg md:text-xl mb-8 font-jakarta leading-relaxed max-w-4xl mx-auto"
+            className="text-base sm:text-lg md:text-2xl mb-8 max-[1200px]:max-w-5xl font-antic leading-relaxed max-w-6xl mx-auto"
             style={{ wordSpacing: "0.3em" }}
           >
             We don&apos;t just plan events; we create unforgettable experiences
