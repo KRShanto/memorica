@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Timeline() {
   const years = [
@@ -102,13 +103,13 @@ export default function Timeline() {
       </div>
       {/* Button */}
       <div className="flex justify-center">
-        <Button
-          size="lg"
-          className="bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full px-8"
+        <Link
+          href="/journey"
+          className="bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full px-8 py-2 flex items-center"
         >
           Explore Our Journeys
           <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        </Link>
       </div>
     </div>
   );
