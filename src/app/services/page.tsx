@@ -1,6 +1,7 @@
 import { EventSection } from "@/components/Event/EventSection";
 import { Metadata } from "next";
 import { serviceSections } from "@/data/serviceSectionsData";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -8,18 +9,34 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   const eventTypes = [
-    { id: "01", name: "Event Planning & Strategy" },
-    { id: "02", name: "Design & Decor" },
-    { id: "03", name: "Vendor Management" },
-    { id: "04", name: "Guest & Audience Management" },
-    { id: "05", name: "Entertainment & Activities" },
-    { id: "06", name: "Marketing & Promotion" },
-    { id: "07", name: "Audio-Visual & Technical Support" },
-    { id: "08", name: "Logistic & Transportation" },
-    { id: "09", name: "Event Safety & Security" },
-    { id: "10", name: "Post Event Services" },
-    { id: "11", name: "Special Services" },
-    { id: "12", name: "Food & Beverage Coordination" },
+    { id: "01", name: "Event Planning & Strategy", link: "#event-planning" },
+    { id: "02", name: "Design & Decor", link: "#design-decor" },
+    { id: "03", name: "Vendor Management", link: "#vendor-management" },
+    {
+      id: "04",
+      name: "Guest & Audience Management",
+      link: "#guest-management",
+    },
+    {
+      id: "05",
+      name: "Entertainment & Activities",
+      link: "#entertainment-activities",
+    },
+    { id: "06", name: "Marketing & Promotion", link: "#marketing-promotion" },
+    {
+      id: "07",
+      name: "Audio-Visual & Technical Support",
+      link: "#audio-visual-support",
+    },
+    {
+      id: "08",
+      name: "Logistic & Transportation",
+      link: "#logistic-transportation",
+    },
+    { id: "09", name: "Event Safety & Security", link: "#event-safety" },
+    { id: "10", name: "Post Event Services", link: "#post-event-services" },
+    { id: "11", name: "Special Services", link: "#special-services" },
+    { id: "12", name: "Food & Beverage Coordination", link: "#food-beverage" },
   ];
 
   return (
@@ -40,7 +57,8 @@ export default function ServicesPage() {
 
       <section className="grid md:grid-cols-2 gap-4 mb-20">
         {eventTypes.map((event) => (
-          <div
+          <Link
+            href={`/services${event.link}`}
             key={event.id}
             className="flex items-center justify-between p-4 rounded-lg border hover:border-purple-600 cursor-pointer transition-colors"
           >
@@ -49,7 +67,7 @@ export default function ServicesPage() {
               <span className="text-gray-900">{event.name}</span>
             </div>
             <span className="text-purple-600">→</span>
-          </div>
+          </Link>
         ))}
       </section>
 
@@ -60,6 +78,7 @@ export default function ServicesPage() {
           benefit={section.benefit}
           events={section.events}
           images={section.images}
+          link={section.link}
         />
       ))}
     </div>

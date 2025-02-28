@@ -1,6 +1,7 @@
 export const serviceSections = [
   {
     title: "Event Planning & Strategy",
+    link: "#event-planning",
     benefit:
       "Make a difference with events that inspire generosity and bring communities together. From fundraising galas to awareness campaigns, we create meaningful experiences that leave a lasting impact. At Memorica, we turn your vision for change into a powerful reality.",
     events: [
@@ -35,6 +36,7 @@ export const serviceSections = [
   },
   {
     title: "Design & Decor",
+    link: "#design-decor",
     benefit:
       "Organizing prestigious and impactful events that reflect the values and vision of government institutions. From official ceremonies to public engagements, we ensure seamless execution with professionalism and precision. At Memorica, we bring structure, elegance, and excellence to every government event.",
     events: [
@@ -69,6 +71,7 @@ export const serviceSections = [
   },
   {
     title: "Vendor Management",
+    link: "#vendor-management",
     benefit:
       "Celebrate life’s special moments with intimate gatherings tailored just for you. From birthdays to anniversaries and exclusive parties, we craft personalized experiences filled with joy and elegance. At Memorica, every private event is a beautifully curated memory in the making.",
     events: [
@@ -105,6 +108,7 @@ export const serviceSections = [
   },
   {
     title: "Guest & Audience Management",
+    link: "#guest-management",
     benefit:
       "From invitations to seating arrangements, we ensure a smooth and welcoming experience for your guests. Personalized hospitality and efficient coordination make every attendee feel valued. ",
     events: [
@@ -142,6 +146,7 @@ export const serviceSections = [
   },
   {
     title: "Entertainment & Activities",
+    link: "#entertainment-activities",
     benefit:
       "Engage and delight your audience with curated entertainment, performances, and interactive activities. We bring energy and excitement to every event, making it unforgettable.",
     events: [
@@ -180,6 +185,7 @@ export const serviceSections = [
   },
   {
     title: "Marketing and Promotion",
+    link: "#marketing-promotion",
     benefit:
       "Maximize your event’s reach with targeted marketing strategies, social media campaigns, and promotional activities. We create buzz and engagement, ensuring your event stands out.",
     events: [
@@ -218,6 +224,7 @@ export const serviceSections = [
 
   {
     title: "Audio-Visual & Technical Support",
+    link: "#audio-visual-support",
     benefit:
       "Ensure flawless execution with high-quality sound, lighting, and technical setups tailored to your event. From live streaming to stage production, we provide cutting-edge solutions.",
     events: [
@@ -256,6 +263,7 @@ export const serviceSections = [
   },
   {
     title: "Logistics & Transportation",
+    link: "#logistic-transportation",
     benefit:
       "Seamless coordination of transportation, accommodations, and on-site logistics for a stress-free event. We handle every detail to ensure smooth operations from start to finish.",
     events: [
@@ -293,6 +301,7 @@ export const serviceSections = [
   },
   {
     title: "Event Safety & Security",
+    link: "#event-safety",
     benefit:
       "Protecting your guests with professional security, emergency planning, and crowd control measures. We prioritize safety, allowing you to focus on enjoying the event.",
     events: [
@@ -330,6 +339,7 @@ export const serviceSections = [
   },
   {
     title: "Post-Event Services",
+    link: "#post-event-services",
     benefit:
       "We provide detailed post-event reports, feedback collection, and analysis to measure success. Continuous improvement and insights help enhance future events.",
     events: [
@@ -367,6 +377,7 @@ export const serviceSections = [
   },
   {
     title: "Special Services",
+    link: "#special-services",
     benefit:
       "Exclusive VIP services, personalized event experiences, and luxury arrangements tailored to your needs. We go the extra mile to make your event truly special.",
     events: [
@@ -403,6 +414,7 @@ export const serviceSections = [
   },
   {
     title: "Food & Beverage Coordination",
+    link: "#food-beverage",
     benefit:
       "Delight your guests with curated menus, high-quality catering, and exceptional dining experiences. We ensure every meal complements the event perfectly.",
     events: [
