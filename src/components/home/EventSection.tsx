@@ -123,12 +123,12 @@ export default function EventsSection() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {category.tags.map((tag) => (
-                    <button
+                    <p
                       key={tag}
-                      className="px-3 py-1 text-sm bg-[#ede5fa] text-[#6D28D9] rounded-full hover:bg-[#6D28D9] hover:text-white transition-colors"
+                      className="px-3 py-1 text-sm bg-[#ede5fa] text-[#6D28D9] rounded-full "
                     >
                       {tag}
-                    </button>
+                    </p>
                   ))}
                 </div>
               </div>
