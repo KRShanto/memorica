@@ -52,10 +52,10 @@ export default function Footer() {
               <Link className="text-sm" href={"/gallery"}>
                 Gallery
               </Link>
-              <Link className="text-sm" href={"/our-journey"}>
+              <Link className="text-sm" href={"/journey"}>
                 Our Journey
               </Link>
-              <Link className="text-sm" href={"/about-us"}>
+              <Link className="text-sm" href={"/about"}>
                 About Us
               </Link>
             </div>
@@ -109,7 +109,7 @@ export default function Footer() {
           <div className="flex gap-3">
             <Link
               className="rounded-full border p-2 bg-[#ad42c9] text-white"
-              href={"https://www.facebook.com/"}
+              href={"https://www.facebook.com/profile.php?id=61573569511811"}
               target="_blank"
             >
               <Facebook className="w-4 h-4" />
