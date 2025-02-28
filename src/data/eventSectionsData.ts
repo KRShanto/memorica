@@ -1,6 +1,7 @@
 export const eventSections = [
   {
     title: "Wedding",
+    link: "#wedding",
     benefit:
       "Your wedding day is a once-in-a-lifetime moment, and we ensure it’s nothing short of perfection. We create unforgettable wedding memories filled with love, elegance, and joy. Every experience we craft is designed to be cherished for a lifetime.",
     events: [
@@ -35,6 +36,7 @@ export const eventSections = [
   },
   {
     title: "Corporate Events",
+    link: "#corporate-events",
     benefit:
       "Elevate your corporate gatherings with events that inspire, engage, and leave a lasting impact. From conferences to product launches, we craft seamless experiences that reflect your brand’s vision and professionalism. At Memorica, every detail is designed for success.",
     events: [
@@ -69,6 +71,7 @@ export const eventSections = [
   },
   {
     title: "Festive",
+    link: "#festive",
     benefit:
       "Celebrate the spirit of every festival with grandeur, joy, and unforgettable moments. Whether it's cultural festivities, holiday parties, or themed celebrations, we bring vibrant energy to every event. At Memorica, we turn festive occasions into cherished memories.",
     events: [
@@ -103,6 +106,7 @@ export const eventSections = [
   },
   {
     title: "Academic Events",
+    link: "#academic-events",
     benefit:
       "From graduation ceremonies to academic conferences, we create events that inspire and celebrate achievements. Our seamless planning ensures a professional and engaging experience for students, educators, and guests. At Memorica, we make every academic milestone truly unforgettable.",
     events: [
@@ -137,6 +141,7 @@ export const eventSections = [
   },
   {
     title: "Charity Events",
+    link: "#charity-events",
     benefit:
       "Make a difference with events that inspire generosity and bring communities together. From fundraising galas to awareness campaigns, we create meaningful experiences that leave a lasting impact. At Memorica, we turn your vision for change into a powerful reality.",
     events: [
@@ -170,6 +175,7 @@ export const eventSections = [
   },
   {
     title: "Government Events",
+    link: "#government-events",
     benefit:
       "Organizing prestigious and impactful events that reflect the values and vision of government institutions. From official ceremonies to public engagements, we ensure seamless execution with professionalism and precision. At Memorica, we bring structure, elegance, and excellence to every government event.",
     events: [
@@ -201,6 +207,7 @@ export const eventSections = [
   },
   {
     title: "Private Events",
+    link: "#private-events",
     benefit:
       "Celebrate life’s special moments with intimate gatherings tailored just for you. From birthdays to anniversaries and exclusive parties, we craft personalized experiences filled with joy and elegance. At Memorica, every private event is a beautifully curated memory in the making.",
     events: [
@@ -235,6 +242,7 @@ export const eventSections = [
   },
   {
     title: "Virtual Events",
+    link: "#virtual-events",
     benefit:
       "Bringing seamless, engaging, and interactive virtual experiences to life. From online conferences to digital celebrations, we ensure every detail is executed flawlessly. At Memorica, we connect people beyond boundaries, making every virtual event impactful and memorable.",
     events: [

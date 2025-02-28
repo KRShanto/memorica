@@ -6,6 +6,7 @@ interface EventSectionProps {
   benefit: string;
   events: Array<{ id: string; name: string }>;
   images: Array<{ src: string; alt: string }>;
+  link: string;
 }
 
 export function EventSection({
@@ -13,9 +14,10 @@ export function EventSection({
   benefit,
   events,
   images,
+  link,
 }: EventSectionProps) {
   return (
-    <section className="mb-20">
+    <section className="mb-20" id={link.replace("#", "")}>
       <EventCard title={title} benefit={benefit} events={events} />
       <ScrollingGallery images={images} speed={100} />
     </section>

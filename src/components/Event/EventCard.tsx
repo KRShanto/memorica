@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 interface EventCardProps {
   title: string;
+
   benefit: string;
   events: Array<{ id: string; name: string }>;
 }
@@ -17,7 +18,7 @@ export function EventCard({ title, benefit, events }: EventCardProps) {
   const isServicePage = pathname.includes("services");
 
   return (
-    <section className="mb-20">
+    <div className="mb-20">
       <h2 className="text-4xl font-serif text-purple-800 mb-12">{title}</h2>
       <div className="grid md:grid-cols-2 gap-12 mb-12">
         <div>
@@ -49,6 +50,6 @@ export function EventCard({ title, benefit, events }: EventCardProps) {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

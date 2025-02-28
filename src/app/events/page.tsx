@@ -1,6 +1,7 @@
 import { EventSection } from "@/components/Event/EventSection";
 import { Metadata } from "next";
 import { eventSections } from "@/data/eventSectionsData";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -8,14 +9,14 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   const eventTypes = [
-    { id: "01", name: "Wedding" },
-    { id: "02", name: "Corporate Events" },
-    { id: "03", name: "Festive" },
-    { id: "04", name: "Academic Events" },
-    { id: "05", name: "Charity Events" },
-    { id: "06", name: "Government Events" },
-    { id: "07", name: "Private Events" },
-    { id: "08", name: "Virtual Events" },
+    { id: "01", name: "Wedding", link: "#wedding" },
+    { id: "02", name: "Corporate Events", link: "#corporate-events" },
+    { id: "03", name: "Festive", link: "#festive" },
+    { id: "04", name: "Academic Events", link: "#academic-events" },
+    { id: "05", name: "Charity Events", link: "#charity-events" },
+    { id: "06", name: "Government Events", link: "#government-events" },
+    { id: "07", name: "Private Events", link: "#private-events" },
+    { id: "08", name: "Virtual Events", link: "#virtual-events" },
   ];
 
   return (
@@ -35,7 +36,8 @@ export default function EventsPage() {
 
       <section className="grid md:grid-cols-2 gap-4 mb-20">
         {eventTypes.map((event) => (
-          <div
+          <Link
+            href={`/events${event.link}`}
             key={event.id}
             className="flex items-center justify-between p-4 rounded-lg border hover:border-purple-600 cursor-pointer transition-colors"
           >
@@ -44,7 +46,7 @@ export default function EventsPage() {
               <span className="text-gray-900">{event.name}</span>
             </div>
             <span className="text-purple-600">→</span>
-          </div>
+          </Link>
         ))}
       </section>
 
@@ -55,6 +57,7 @@ export default function EventsPage() {
           benefit={section.benefit}
           events={section.events}
           images={section.images}
+          link={section.link}
         />
       ))}
     </div>
